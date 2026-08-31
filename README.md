@@ -1,2 +1,0 @@
-# paulolingerost.github.io
-Website
