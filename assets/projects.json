@@ -21,7 +21,7 @@
   },
   {
     "slug": "bvlgari",
-    "order": 2,
+    "order": 4,
     "title": "Bvlgari",
     "type": "publicité",
     "credit": "écrit et réalisé par Corentin Huard",
@@ -58,7 +58,7 @@
   },
   {
     "slug": "sur-le-sentier",
-    "order": 4,
+    "order": 2,
     "title": "Sur Le Sentier",
     "type": "long-métrage",
     "credit": "écrit et réalisé par Gérard Jumel",
