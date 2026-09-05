@@ -92,30 +92,22 @@ nav button:hover, nav button:focus-visible{color:var(--ink);}
   position:absolute;
   left:50%;
   transform:translateX(-50%);
-  display:inline-flex; align-items:center; gap:10px;
+  display:inline-flex; align-items:center;
   background:none; border:none; color:var(--ink); cursor:pointer;
   padding:0;
-}
-.hero-play-icon{
-  width:34px; height:34px;
-  border:1px solid rgba(242,241,239,0.35);
-  border-radius:50%;
-  display:flex; align-items:center; justify-content:center;
-  font-size:0.68rem;
-  padding-left:2px; /* recentre visuellement le triangle ▶ */
-  transition:border-color .25s ease, background-color .25s ease;
 }
 .hero-play-label{
   font-size:0.85rem;
   color:var(--ink-dim);
   letter-spacing:0.01em;
-  transition:color .25s ease;
+  padding-bottom:2px;
+  border-bottom:1px solid transparent;
+  transition:color .25s ease, border-color .25s ease;
 }
-.hero-play:hover .hero-play-icon{
-  border-color:var(--ink);
-  background-color:rgba(242,241,239,0.08);
+.hero-play:hover .hero-play-label{
+  color:var(--ink);
+  border-bottom-color:rgba(242,241,239,0.4);
 }
-.hero-play:hover .hero-play-label{color:var(--ink);}
 
 /* ---------- bande démo (lecteur plein, avec son) ---------- */
 .video-modal{
