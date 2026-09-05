@@ -4,36 +4,65 @@
     "order": 1,
     "title": "L'Odeur de l'Été",
     "type": "court-métrage",
+    "role": "",
     "credit": "écrit et réalisé par Bastien Louessard",
     "prod": "Produit par Asmar Production x OMEN Films",
     "diffusion": "",
     "stills": [
-      "01.jpg",
-      "02.jpg",
-      "03.jpg",
-      "04.jpg",
-      "05.jpg",
-      "06.jpg",
-      "07.jpg",
-      "08.jpg",
-      "09.jpg"
-    ]
-  },
-  {
-    "slug": "sur-le-sentier",
-    "order": 2,
-    "title": "Sur Le Sentier",
-    "type": "long-métrage",
-    "credit": "écrit et réalisé par Gérard Jumel",
-    "prod": "Produit par JOUR J Productions",
-    "diffusion": "",
-    "stills": [
-      "01.jpg",
-      "02.jpg",
-      "03.jpg",
-      "04.jpg",
-      "05.jpg",
-      "06.jpg"
+      {
+        "file": "01.jpg",
+        "width": 648,
+        "height": 344,
+        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
+      },
+      {
+        "file": "02.jpg",
+        "width": 648,
+        "height": 344,
+        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
+      },
+      {
+        "file": "03.jpg",
+        "width": 648,
+        "height": 344,
+        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
+      },
+      {
+        "file": "04.jpg",
+        "width": 648,
+        "height": 344,
+        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w"
+      },
+      {
+        "file": "05.jpg",
+        "width": 648,
+        "height": 344,
+        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w"
+      },
+      {
+        "file": "06.jpg",
+        "width": 648,
+        "height": 344,
+        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w"
+      },
+      {
+        "file": "07.jpg",
+        "width": 648,
+        "height": 344,
+        "srcset": "07-480.jpg 480w, 07-960.jpg 960w, 07-1600.jpg 1600w"
+      },
+      {
+        "file": "08.jpg",
+        "width": 648,
+        "height": 344,
+        "srcset": "08-480.jpg 480w, 08-960.jpg 960w, 08-1600.jpg 1600w"
+      },
+      {
+        "file": "09.jpg",
+        "width": 636,
+        "height": 344,
+        "srcset": "09-480.jpg 480w, 09-960.jpg 960w, 09-1600.jpg 1600w"
+      }
     ]
   },
   {
@@ -41,16 +70,47 @@
     "order": 3,
     "title": "Rose d'Hiver",
     "type": "court-métrage",
+    "role": "",
     "credit": "écrit et réalisé par Alexis Rousseau",
     "prod": "Produit par OMEN Films",
     "diffusion": "",
     "stills": [
-      "01.jpg",
-      "02.jpg",
-      "03.jpg",
-      "04.jpg",
-      "05.jpg",
-      "06.jpg"
+      {
+        "file": "01.jpg",
+        "width": 648,
+        "height": 272,
+        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
+      },
+      {
+        "file": "02.jpg",
+        "width": 648,
+        "height": 272,
+        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
+      },
+      {
+        "file": "03.jpg",
+        "width": 648,
+        "height": 272,
+        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
+      },
+      {
+        "file": "04.jpg",
+        "width": 648,
+        "height": 272,
+        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w"
+      },
+      {
+        "file": "05.jpg",
+        "width": 648,
+        "height": 272,
+        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w"
+      },
+      {
+        "file": "06.jpg",
+        "width": 648,
+        "height": 272,
+        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w"
+      }
     ]
   },
   {
@@ -58,13 +118,77 @@
     "order": 4,
     "title": "Bvlgari",
     "type": "publicité",
+    "role": "",
     "credit": "écrit et réalisé par Corentin Huard",
     "prod": "Produit par 1001 Films Production",
     "diffusion": "",
     "stills": [
-      "01.jpg",
-      "02.jpg",
-      "03.jpg"
+      {
+        "file": "01.jpg",
+        "width": 648,
+        "height": 272,
+        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
+      },
+      {
+        "file": "02.jpg",
+        "width": 648,
+        "height": 272,
+        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
+      },
+      {
+        "file": "03.jpg",
+        "width": 648,
+        "height": 272,
+        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
+      }
+    ]
+  },
+  {
+    "slug": "sur-le-sentier",
+    "order": 4,
+    "title": "Sur Le Sentier",
+    "type": "long-métrage",
+    "role": "",
+    "credit": "écrit et réalisé par Gérard Jumel",
+    "prod": "Produit par JOUR J Productions",
+    "diffusion": "",
+    "stills": [
+      {
+        "file": "01.jpg",
+        "width": 648,
+        "height": 362,
+        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
+      },
+      {
+        "file": "02.jpg",
+        "width": 648,
+        "height": 362,
+        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
+      },
+      {
+        "file": "03.jpg",
+        "width": 648,
+        "height": 362,
+        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
+      },
+      {
+        "file": "04.jpg",
+        "width": 648,
+        "height": 362,
+        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w"
+      },
+      {
+        "file": "05.jpg",
+        "width": 648,
+        "height": 362,
+        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w"
+      },
+      {
+        "file": "06.jpg",
+        "width": 648,
+        "height": 362,
+        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w"
+      }
     ]
   },
   {
@@ -72,16 +196,77 @@
     "order": 5,
     "title": "Pietragalla Danse Barbara",
     "type": "teaser promotionnel / danse",
+    "role": "",
     "credit": "mis en scène par Julien Derouault & Marie-Claude Pietragalla",
     "prod": "Seul en scène de Pietra — Le Théâtre du Corps Pietragalla-Derouault",
     "diffusion": "",
     "stills": [
-      "01.jpg",
-      "02.jpg",
-      "03.jpg",
-      "04.jpg",
-      "05.jpg",
-      "06.jpg"
+      {
+        "file": "01.jpg",
+        "width": 646,
+        "height": 272,
+        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
+      },
+      {
+        "file": "02.jpg",
+        "width": 646,
+        "height": 272,
+        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
+      },
+      {
+        "file": "03.jpg",
+        "width": 646,
+        "height": 272,
+        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
+      },
+      {
+        "file": "04.jpg",
+        "width": 646,
+        "height": 272,
+        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w"
+      },
+      {
+        "file": "05.jpg",
+        "width": 646,
+        "height": 272,
+        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w"
+      },
+      {
+        "file": "06.jpg",
+        "width": 646,
+        "height": 272,
+        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w"
+      },
+      {
+        "file": "07.jpg",
+        "width": 648,
+        "height": 272,
+        "srcset": "07-480.jpg 480w, 07-960.jpg 960w, 07-1600.jpg 1600w"
+      },
+      {
+        "file": "08.jpg",
+        "width": 648,
+        "height": 272,
+        "srcset": "08-480.jpg 480w, 08-960.jpg 960w, 08-1600.jpg 1600w"
+      },
+      {
+        "file": "09.jpg",
+        "width": 648,
+        "height": 272,
+        "srcset": "09-480.jpg 480w, 09-960.jpg 960w, 09-1600.jpg 1600w"
+      },
+      {
+        "file": "10.jpg",
+        "width": 648,
+        "height": 272,
+        "srcset": "10-480.jpg 480w, 10-960.jpg 960w, 10-1600.jpg 1600w"
+      },
+      {
+        "file": "11.jpg",
+        "width": 648,
+        "height": 272,
+        "srcset": "11-480.jpg 480w, 11-960.jpg 960w, 11-1600.jpg 1600w"
+      }
     ]
   },
   {
@@ -89,16 +274,47 @@
     "order": 6,
     "title": "OSEF Le Paradis",
     "type": "court-métrage",
+    "role": "",
     "credit": "réalisé par Quentin Dufournet-Charles",
     "prod": "Produit par Pimento Films avec le soutien du CNC et de Arté",
     "diffusion": "Diffusion télé + streaming sur Arté",
     "stills": [
-      "01.jpg",
-      "02.jpg",
-      "03.jpg",
-      "04.jpg",
-      "05.jpg",
-      "06.jpg"
+      {
+        "file": "01.jpg",
+        "width": 648,
+        "height": 272,
+        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
+      },
+      {
+        "file": "02.jpg",
+        "width": 648,
+        "height": 272,
+        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
+      },
+      {
+        "file": "03.jpg",
+        "width": 648,
+        "height": 272,
+        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
+      },
+      {
+        "file": "04.jpg",
+        "width": 648,
+        "height": 272,
+        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w"
+      },
+      {
+        "file": "05.jpg",
+        "width": 648,
+        "height": 272,
+        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w"
+      },
+      {
+        "file": "06.jpg",
+        "width": 648,
+        "height": 272,
+        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w"
+      }
     ]
   },
   {
@@ -106,16 +322,47 @@
     "order": 7,
     "title": "Des Vacances à Tout Prix",
     "type": "long-métrage",
+    "role": "",
     "credit": "réalisé par Stevan Lee Mraovitch",
     "prod": "Produit par Charlotte Russe Films avec le soutien du CNC",
     "diffusion": "Diffusion festivals internationaux + streaming sur tubitv.com (U.S. seulement)",
     "stills": [
-      "01.jpg",
-      "02.jpg",
-      "03.jpg",
-      "04.jpg",
-      "05.jpg",
-      "06.jpg"
+      {
+        "file": "01.jpg",
+        "width": 642,
+        "height": 332,
+        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
+      },
+      {
+        "file": "02.jpg",
+        "width": 648,
+        "height": 332,
+        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
+      },
+      {
+        "file": "03.jpg",
+        "width": 648,
+        "height": 332,
+        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
+      },
+      {
+        "file": "04.jpg",
+        "width": 648,
+        "height": 332,
+        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w"
+      },
+      {
+        "file": "05.jpg",
+        "width": 638,
+        "height": 332,
+        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w"
+      },
+      {
+        "file": "06.jpg",
+        "width": 648,
+        "height": 332,
+        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w"
+      }
     ]
   },
   {
@@ -123,16 +370,47 @@
     "order": 8,
     "title": "FARIO",
     "type": "long-métrage",
+    "role": "",
     "credit": "réalisé par Gérard Jumel",
     "prod": "Produit par Jour J Productions",
     "diffusion": "Diffusion festivals + sortie salles indépendantes",
     "stills": [
-      "01.jpg",
-      "02.jpg",
-      "03.jpg",
-      "04.jpg",
-      "05.jpg",
-      "06.jpg"
+      {
+        "file": "01.jpg",
+        "width": 646,
+        "height": 266,
+        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
+      },
+      {
+        "file": "02.jpg",
+        "width": 646,
+        "height": 266,
+        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
+      },
+      {
+        "file": "03.jpg",
+        "width": 642,
+        "height": 266,
+        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
+      },
+      {
+        "file": "04.jpg",
+        "width": 640,
+        "height": 266,
+        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w"
+      },
+      {
+        "file": "05.jpg",
+        "width": 642,
+        "height": 266,
+        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w"
+      },
+      {
+        "file": "06.jpg",
+        "width": 646,
+        "height": 266,
+        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w"
+      }
     ]
   },
   {
@@ -140,16 +418,47 @@
     "order": 9,
     "title": "Far Cry 5 — Shadow",
     "type": "publicité",
+    "role": "",
     "credit": "réalisé par Léo Wolfenstein",
     "prod": "Produit par Cléo Productions",
     "diffusion": "",
     "stills": [
-      "01.jpg",
-      "02.jpg",
-      "03.jpg",
-      "04.jpg",
-      "05.jpg",
-      "06.jpg"
+      {
+        "file": "01.jpg",
+        "width": 644,
+        "height": 240,
+        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
+      },
+      {
+        "file": "02.jpg",
+        "width": 642,
+        "height": 248,
+        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
+      },
+      {
+        "file": "03.jpg",
+        "width": 642,
+        "height": 240,
+        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
+      },
+      {
+        "file": "04.jpg",
+        "width": 640,
+        "height": 240,
+        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w"
+      },
+      {
+        "file": "05.jpg",
+        "width": 642,
+        "height": 240,
+        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w"
+      },
+      {
+        "file": "06.jpg",
+        "width": 642,
+        "height": 240,
+        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w"
+      }
     ]
   },
   {
@@ -157,16 +466,47 @@
     "order": 10,
     "title": "Call Me Nina",
     "type": "publicité — fashion week",
+    "role": "",
     "credit": "réalisé par Gabriel Maz",
     "prod": "Film promotionnel pour la nouvelle collection du créateur Victor Weinsanto",
     "diffusion": "",
     "stills": [
-      "01.jpg",
-      "02.jpg",
-      "03.jpg",
-      "04.jpg",
-      "05.jpg",
-      "06.jpg"
+      {
+        "file": "01.jpg",
+        "width": 646,
+        "height": 268,
+        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
+      },
+      {
+        "file": "02.jpg",
+        "width": 644,
+        "height": 268,
+        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
+      },
+      {
+        "file": "03.jpg",
+        "width": 644,
+        "height": 268,
+        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
+      },
+      {
+        "file": "04.jpg",
+        "width": 644,
+        "height": 268,
+        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w"
+      },
+      {
+        "file": "05.jpg",
+        "width": 644,
+        "height": 268,
+        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w"
+      },
+      {
+        "file": "06.jpg",
+        "width": 644,
+        "height": 268,
+        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w"
+      }
     ]
   }
 ]
