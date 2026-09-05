@@ -38,7 +38,7 @@
 // Vimeo pour un lecteur sobre : masquez le titre/auteur/logo dans les
 // paramètres de confidentialité de la vidéo (Options de confidentialité >
 // "Masquer de vimeo.com" + personnalisation du lecteur).
-const VIMEO_ID = 'VOTRE_ID_VIMEO';
+const VIMEO_ID = '1224259824';
 
 (function initReelModal(){
   const heroVideo = document.getElementById('heroVideo');
