@@ -15,6 +15,7 @@ l'interactivité (carrousels, lightbox, modales).
 """
 
 import datetime
+import hashlib
 import html
 import json
 import os
@@ -194,7 +195,7 @@ def project_page(p, prev_p, next_p):
 </script>
 <link rel="preconnect" href="https://api.fontshare.com">
 <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/style.css?v={asset_version('style.css')}">
 </head>
 <body class="project-page">
 
@@ -283,7 +284,35 @@ def write_sitemap(root, projects):
     print("✅ sitemap.xml mis à jour")
 
 
+# ------------------------------------------------------------- anti-cache
+# Ajoute ?v=<empreinte> aux liens vers style.css et script.js : dès que l'un
+# des deux change, les navigateurs téléchargent la nouvelle version au lieu
+# de garder l'ancienne en cache (sinon : page nouvelle + style ancien = tout
+# se décale).
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+
+def asset_version(name):
+    with open(os.path.join(ROOT_DIR, name), "rb") as f:
+        return hashlib.md5(f.read()).hexdigest()[:8]
+
+
+def bust_cache(root):
+    for page in ("index.html", "404.html"):
+        path = os.path.join(root, page)
+        if not os.path.isfile(path):
+            continue
+        with open(path, encoding="utf-8") as f:
+            src = f.read()
+        for name in ("style.css", "script.js"):
+            src = re.sub(r'(href|src)="(/?)' + re.escape(name) + r'(\?v=[0-9a-f]+)?"',
+                         lambda m, n=name: f'{m.group(1)}="{m.group(2)}{n}?v={asset_version(n)}"', src)
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(src)
+
+
 def render(root, projects):
+    bust_cache(root)
     inject_index(root, projects)
     write_project_pages(root, projects)
     write_sitemap(root, projects)
