@@ -404,6 +404,7 @@ main:focus{outline:none;}
 #bioModal .modal-body p{
   text-align:justify;
   text-indent:1.6em;
+  hyphens:auto;
 }
 #bioModal .modal-body p.bio-lang-note{text-indent:0;}
 .text-modal-inner .modal-body h3{
@@ -524,8 +525,9 @@ footer .footer-title{
 
 /* ---------- bio : chapeau ---------- */
 #bioModal .modal-body p.bio-lead{
-  text-indent:0;
-  text-align:left;
+  text-indent:1.6em;
+  text-align:justify;
+  hyphens:auto;
   color:var(--ink);
   font-size:1rem;
   line-height:1.7;
