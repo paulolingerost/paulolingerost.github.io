@@ -124,13 +124,25 @@ def project_page(p, prev_p, next_p):
     url = f"{SITE}/projets/{p['slug']}/"
     base = f"/assets/stills/{p['slug']}/"
     first = p["stills"][0]
-    image = f"{SITE}{base}{first['file']}"
+    # Image de partage : la plus grande variante disponible (1600 px),
+    # sinon l'original.
+    og_file, og_w = first["file"], first.get("width")
+    for part in (first.get("srcset") or "").split(", "):
+        if part.endswith(" 1600w"):
+            og_file, og_w = part.split(" ")[0], 1600
+    image = f"{SITE}{base}{og_file}"
+    og_h = round(og_w * first["height"] / first["width"]) if og_w and first.get("width") else None
+    og_dims = (f'<meta property="og:image:width" content="{og_w}">\n'
+               f'<meta property="og:image:height" content="{og_h}">\n') if og_h else ""
     type_ = p.get("type", "")
-    title_tag = f"{p['title']} — {type_} · Image : {NAME}, directeur de la photographie"
-    desc_bits = [f"{p['title']}, {type_} {p.get('credit', '')}".strip(),
-                 p.get("prod", ""), p.get("diffusion", ""),
-                 f"Image : {NAME}, directeur de la photographie à Paris."]
-    description = ". ".join(b.rstrip(".") for b in desc_bits if b)[:300]
+    # Titre court (Google coupe vers 60 caractères)
+    title_tag = f"{p['title']} ({type_}) — {NAME}, chef opérateur"
+    description = f"{p['title']}, {type_} {p.get('credit', '')}".strip().rstrip(".") + \
+        f". Image : {NAME}, directeur de la photographie à Paris."
+    if p.get("diffusion"):
+        description += f" {p['diffusion'].rstrip('.')}."
+    if len(description) > 160:
+        description = description[:157].rsplit(" ", 1)[0] + "…"
 
     is_film = any(k in type_.lower() for k in ("métrage", "documentaire"))
     ld = {
@@ -188,6 +200,7 @@ def project_page(p, prev_p, next_p):
 <meta property="og:title" content="{esc(p['title'])} — image {NAME}">
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:image" content="{image}">
+{og_dims}<meta property="og:image:alt" content="{esc(still_alt(p, first, 0))}">
 <meta property="og:url" content="{url}">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
