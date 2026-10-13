@@ -1,8 +1,9 @@
 {
   "order": 8,
-  "title": "FARIO",
+  "title": "Fario",
   "type": "long-métrage",
   "credit": "réalisé par Gérard Jumel",
   "prod": "Produit par Jour J Productions",
-  "diffusion": "Diffusion festivals + sortie salles indépendantes"
+  "diffusion": "Festivals et sortie en salles art et essai",
+  "camera": "Alexa Plus + Cooke Panchro"
 }

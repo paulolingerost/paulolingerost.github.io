@@ -1,134 +1,200 @@
 [
   {
     "file": "photo-01.webp",
+    "width": 3130,
+    "height": 2075,
     "srcset": "photo-01-480.webp 480w, photo-01-960.webp 960w, photo-01-1600.webp 1600w"
   },
   {
     "file": "photo-02.webp",
+    "width": 2075,
+    "height": 3130,
     "srcset": "photo-02-480.webp 480w, photo-02-960.webp 960w, photo-02-1600.webp 1600w"
   },
   {
     "file": "photo-03.webp",
+    "width": 2075,
+    "height": 3130,
     "srcset": "photo-03-480.webp 480w, photo-03-960.webp 960w, photo-03-1600.webp 1600w"
   },
   {
     "file": "photo-04.webp",
+    "width": 3130,
+    "height": 2075,
     "srcset": "photo-04-480.webp 480w, photo-04-960.webp 960w, photo-04-1600.webp 1600w"
   },
   {
     "file": "photo-05.webp",
+    "width": 2075,
+    "height": 3130,
     "srcset": "photo-05-480.webp 480w, photo-05-960.webp 960w, photo-05-1600.webp 1600w"
   },
   {
     "file": "photo-06.webp",
+    "width": 3130,
+    "height": 2075,
     "srcset": "photo-06-480.webp 480w, photo-06-960.webp 960w, photo-06-1600.webp 1600w"
   },
   {
     "file": "photo-07.webp",
+    "width": 3130,
+    "height": 2075,
     "srcset": "photo-07-480.webp 480w, photo-07-960.webp 960w, photo-07-1600.webp 1600w"
   },
   {
     "file": "photo-08.webp",
+    "width": 2075,
+    "height": 3130,
     "srcset": "photo-08-480.webp 480w, photo-08-960.webp 960w, photo-08-1600.webp 1600w"
   },
   {
     "file": "photo-09.webp",
+    "width": 2075,
+    "height": 3130,
     "srcset": "photo-09-480.webp 480w, photo-09-960.webp 960w, photo-09-1600.webp 1600w"
   },
   {
     "file": "photo-10.webp",
+    "width": 3130,
+    "height": 2075,
     "srcset": "photo-10-480.webp 480w, photo-10-960.webp 960w, photo-10-1600.webp 1600w"
   },
   {
     "file": "photo-11.webp",
+    "width": 3130,
+    "height": 2075,
     "srcset": "photo-11-480.webp 480w, photo-11-960.webp 960w, photo-11-1600.webp 1600w"
   },
   {
     "file": "photo-12.webp",
+    "width": 2075,
+    "height": 3130,
     "srcset": "photo-12-480.webp 480w, photo-12-960.webp 960w, photo-12-1600.webp 1600w"
   },
   {
     "file": "photo-13.webp",
+    "width": 2075,
+    "height": 3130,
     "srcset": "photo-13-480.webp 480w, photo-13-960.webp 960w, photo-13-1600.webp 1600w"
   },
   {
     "file": "photo-14.webp",
+    "width": 2075,
+    "height": 3130,
     "srcset": "photo-14-480.webp 480w, photo-14-960.webp 960w, photo-14-1600.webp 1600w"
   },
   {
     "file": "photo-15.webp",
+    "width": 3130,
+    "height": 2075,
     "srcset": "photo-15-480.webp 480w, photo-15-960.webp 960w, photo-15-1600.webp 1600w"
   },
   {
     "file": "photo-16.webp",
+    "width": 3130,
+    "height": 2075,
     "srcset": "photo-16-480.webp 480w, photo-16-960.webp 960w, photo-16-1600.webp 1600w"
   },
   {
     "file": "photo-17.webp",
+    "width": 3130,
+    "height": 2075,
     "srcset": "photo-17-480.webp 480w, photo-17-960.webp 960w, photo-17-1600.webp 1600w"
   },
   {
     "file": "photo-18.webp",
+    "width": 2075,
+    "height": 3130,
     "srcset": "photo-18-480.webp 480w, photo-18-960.webp 960w, photo-18-1600.webp 1600w"
   },
   {
     "file": "photo-19.webp",
+    "width": 2075,
+    "height": 3130,
     "srcset": "photo-19-480.webp 480w, photo-19-960.webp 960w, photo-19-1600.webp 1600w"
   },
   {
     "file": "photo-20.webp",
+    "width": 3130,
+    "height": 2075,
     "srcset": "photo-20-480.webp 480w, photo-20-960.webp 960w, photo-20-1600.webp 1600w"
   },
   {
     "file": "photo-21.webp",
+    "width": 2075,
+    "height": 3130,
     "srcset": "photo-21-480.webp 480w, photo-21-960.webp 960w, photo-21-1600.webp 1600w"
   },
   {
     "file": "photo-22.webp",
+    "width": 2075,
+    "height": 3130,
     "srcset": "photo-22-480.webp 480w, photo-22-960.webp 960w, photo-22-1600.webp 1600w"
   },
   {
     "file": "photo-23.webp",
+    "width": 2075,
+    "height": 3130,
     "srcset": "photo-23-480.webp 480w, photo-23-960.webp 960w, photo-23-1600.webp 1600w"
   },
   {
     "file": "photo-24.webp",
+    "width": 3130,
+    "height": 2075,
     "srcset": "photo-24-480.webp 480w, photo-24-960.webp 960w, photo-24-1600.webp 1600w"
   },
   {
     "file": "photo-25.webp",
+    "width": 2075,
+    "height": 3130,
     "srcset": "photo-25-480.webp 480w, photo-25-960.webp 960w, photo-25-1600.webp 1600w"
   },
   {
     "file": "photo-26.webp",
+    "width": 3130,
+    "height": 2075,
     "srcset": "photo-26-480.webp 480w, photo-26-960.webp 960w, photo-26-1600.webp 1600w"
   },
   {
     "file": "photo-27.webp",
+    "width": 3130,
+    "height": 2075,
     "srcset": "photo-27-480.webp 480w, photo-27-960.webp 960w, photo-27-1600.webp 1600w"
   },
   {
     "file": "photo-28.webp",
+    "width": 2075,
+    "height": 3130,
     "srcset": "photo-28-480.webp 480w, photo-28-960.webp 960w, photo-28-1600.webp 1600w"
   },
   {
     "file": "photo-29.webp",
+    "width": 2075,
+    "height": 3130,
     "srcset": "photo-29-480.webp 480w, photo-29-960.webp 960w, photo-29-1600.webp 1600w"
   },
   {
     "file": "photo-30.webp",
+    "width": 2075,
+    "height": 3130,
     "srcset": "photo-30-480.webp 480w, photo-30-960.webp 960w, photo-30-1600.webp 1600w"
   },
   {
     "file": "photo-31.webp",
+    "width": 3130,
+    "height": 2075,
     "srcset": "photo-31-480.webp 480w, photo-31-960.webp 960w, photo-31-1600.webp 1600w"
   },
   {
     "file": "photo-32.webp",
+    "width": 3130,
+    "height": 2075,
     "srcset": "photo-32-480.webp 480w, photo-32-960.webp 960w, photo-32-1600.webp 1600w"
   },
   {
     "file": "photo-33.webp",
+    "width": 3130,
+    "height": 2075,
     "srcset": "photo-33-480.webp 480w, photo-33-960.webp 960w, photo-33-1600.webp 1600w"
   }
 ]

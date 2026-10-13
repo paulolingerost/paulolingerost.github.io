@@ -6,8 +6,11 @@
     "type": "court-métrage",
     "role": "",
     "credit": "écrit et réalisé par Bastien Louessard",
-    "prod": "Produit par Asmar Production x OMEN Films",
-    "diffusion": "",
+    "prod": "Produit par Asmar Productions x OMEN Films",
+    "diffusion": "En post-production",
+    "camera": "Alexa Mini + Cooke S4 Mini",
+    "synopsis": "",
+    "video": "",
     "stills": [
       {
         "file": "01.jpg",
@@ -74,6 +77,9 @@
     "credit": "écrit et réalisé par Alexis Rousseau",
     "prod": "Produit par OMEN Films",
     "diffusion": "",
+    "camera": "Alexa Mini + Cooke Anamorphic S6",
+    "synopsis": "",
+    "video": "",
     "stills": [
       {
         "file": "01.jpg",
@@ -119,9 +125,12 @@
     "title": "Bvlgari",
     "type": "publicité",
     "role": "",
-    "credit": "écrit et réalisé par Corentin Huard",
-    "prod": "Produit par 1001 Films Production",
+    "credit": "réalisé par Corentin Huard",
+    "prod": "Produit par 1001 Films Productions",
     "diffusion": "",
+    "camera": "",
+    "synopsis": "",
+    "video": "",
     "stills": [
       {
         "file": "01.jpg",
@@ -145,13 +154,16 @@
   },
   {
     "slug": "sur-le-sentier",
-    "order": 4,
-    "title": "Sur Le Sentier",
+    "order": 4.5,
+    "title": "Sur le Sentier",
     "type": "long-métrage",
     "role": "",
     "credit": "écrit et réalisé par Gérard Jumel",
-    "prod": "Produit par JOUR J Productions",
-    "diffusion": "",
+    "prod": "Produit par Jour J Productions",
+    "diffusion": "Sorti en salles en avril 2026",
+    "camera": "Alexa XT + Zeiss 35 mm GO T1.3",
+    "synopsis": "",
+    "video": "",
     "stills": [
       {
         "file": "01.jpg",
@@ -195,11 +207,14 @@
     "slug": "pietragalla-danse-barbara",
     "order": 5,
     "title": "Pietragalla Danse Barbara",
-    "type": "teaser promotionnel / danse",
+    "type": "teaser promotionnel — danse",
     "role": "",
     "credit": "mis en scène par Julien Derouault & Marie-Claude Pietragalla",
     "prod": "Seul en scène de Pietra — Le Théâtre du Corps Pietragalla-Derouault",
     "diffusion": "",
+    "camera": "",
+    "synopsis": "",
+    "video": "",
     "stills": [
       {
         "file": "01.jpg",
@@ -276,8 +291,11 @@
     "type": "court-métrage",
     "role": "",
     "credit": "réalisé par Quentin Dufournet-Charles",
-    "prod": "Produit par Pimento Films avec le soutien du CNC et de Arté",
-    "diffusion": "Diffusion télé + streaming sur Arté",
+    "prod": "Produit par Pimento Films avec le soutien du CNC et d'Arte",
+    "diffusion": "Diffusion TV et streaming sur Arte",
+    "camera": "Alexa Mini LF + Technovision Classic 1,5x anamorphique",
+    "synopsis": "",
+    "video": "",
     "stills": [
       {
         "file": "01.jpg",
@@ -325,7 +343,10 @@
     "role": "",
     "credit": "réalisé par Stevan Lee Mraovitch",
     "prod": "Produit par Charlotte Russe Films avec le soutien du CNC",
-    "diffusion": "Diffusion festivals internationaux + streaming sur tubitv.com (U.S. seulement)",
+    "diffusion": "Festivals internationaux, streaming sur Tubi (États-Unis)",
+    "camera": "Sony F65 + Panavision Primo-S",
+    "synopsis": "",
+    "video": "",
     "stills": [
       {
         "file": "01.jpg",
@@ -368,12 +389,15 @@
   {
     "slug": "fario",
     "order": 8,
-    "title": "FARIO",
+    "title": "Fario",
     "type": "long-métrage",
     "role": "",
     "credit": "réalisé par Gérard Jumel",
     "prod": "Produit par Jour J Productions",
-    "diffusion": "Diffusion festivals + sortie salles indépendantes",
+    "diffusion": "Festivals et sortie en salles art et essai",
+    "camera": "Alexa Plus + Cooke Panchro",
+    "synopsis": "",
+    "video": "",
     "stills": [
       {
         "file": "01.jpg",
@@ -422,6 +446,9 @@
     "credit": "réalisé par Léo Wolfenstein",
     "prod": "Produit par Cléo Productions",
     "diffusion": "",
+    "camera": "Alexa Mini + Cooke Anamorphic",
+    "synopsis": "",
+    "video": "",
     "stills": [
       {
         "file": "01.jpg",
@@ -470,6 +497,9 @@
     "credit": "réalisé par Gabriel Maz",
     "prod": "Film promotionnel pour la nouvelle collection du créateur Victor Weinsanto",
     "diffusion": "",
+    "camera": "Blackmagic Pocket 6K + Atlas Orion Anamorphic",
+    "synopsis": "",
+    "video": "",
     "stills": [
       {
         "file": "01.jpg",

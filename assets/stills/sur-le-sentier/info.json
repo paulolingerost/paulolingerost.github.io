@@ -1,7 +1,9 @@
 {
-  "order": 4,
-  "title": "Sur Le Sentier",
+  "order": 4.5,
+  "title": "Sur le Sentier",
   "type": "long-métrage",
   "credit": "écrit et réalisé par Gérard Jumel",
-  "prod": "Produit par JOUR J Productions"
+  "prod": "Produit par Jour J Productions",
+  "camera": "Alexa XT + Zeiss 35 mm GO T1.3",
+  "diffusion": "Sorti en salles en avril 2026"
 }

@@ -3,34 +3,73 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Paul Olinger Ost — Directeur de la Photographie</title>
-<meta name="description" content="Paul Olinger Ost, directeur de la photographie basé à Paris, disponible pour tournages à l'international.">
+<title>Paul Olinger Ost — Chef opérateur, directeur de la photographie à Paris</title>
+<meta name="description" content="Paul Olinger Ost, chef opérateur et directeur de la photographie basé à Paris : longs-métrages, courts-métrages, publicité et danse. Sur le Sentier, Fario, Arte, Canal+, Givenchy. Disponible à l'international.">
+<link rel="canonical" href="https://paulolingerost.com/">
+<meta name="theme-color" content="#0B0B0B">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<meta property="og:type" content="profile">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Paul Olinger Ost">
 <meta property="og:title" content="Paul Olinger Ost — Directeur de la photographie">
-<meta property="og:description" content="Paul Olinger Ost, directeur de la photographie basé à Paris, disponible pour tournages à l'international.">
+<meta property="og:description" content="Chef opérateur basé à Paris : longs-métrages, courts-métrages, publicité et danse. Disponible à l'international.">
 <meta property="og:image" content="https://paulolingerost.com/assets/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Deux personnes assises dans un champ au crépuscule — photogramme de L'Odeur de l'Été">
 <meta property="og:url" content="https://paulolingerost.com/">
 <meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://paulolingerost.com/#paul",
+  "name": "Paul Olinger Ost",
+  "jobTitle": ["Directeur de la photographie", "Chef opérateur"],
+  "description": "Directeur de la photographie basé à Paris : longs-métrages, courts-métrages, publicité et danse.",
+  "url": "https://paulolingerost.com/",
+  "image": "https://paulolingerost.com/assets/bio/portrait.jpg",
+  "email": "mailto:contact@paulolingerost.com",
+  "telephone": "+33659862680",
+  "address": {"@type": "PostalAddress", "addressLocality": "Paris", "addressCountry": "FR"},
+  "knowsLanguage": ["fr", "en"],
+  "sameAs": [
+    "https://www.imdb.com/name/nm7436555/",
+    "https://www.instagram.com/paulolingerost/"
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://api.fontshare.com">
 <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <div class="construction-badge">site en cours de finition</div>
-  <nav>
-    <button id="navFilmo">Filmographie</button>
-    <button id="navPics">Photos</button>
-    <button id="navBio">Bio</button>
+<a class="skip-link" href="#main">Aller au contenu</a>
+
+<header class="site-header">
+  <nav aria-label="Navigation principale">
+    <button type="button" id="navFilmo" aria-controls="filmoModal" aria-expanded="false" aria-haspopup="dialog">Filmographie</button>
+    <button type="button" id="navPics" aria-controls="picsModal" aria-expanded="false" aria-haspopup="dialog">Photos</button>
+    <button type="button" id="navBio" aria-controls="bioModal" aria-expanded="false" aria-haspopup="dialog">Bio</button>
   </nav>
 </header>
 
-<section class="hero">
+<section class="hero" aria-label="Présentation">
   <div class="hero-bg" id="heroBg">
-    <!-- La vidéo doit être un .mp4 encodé en H.264 (voir COMMENT_AJOUTER_LES_MEDIAS.md).
-         Deux versions sont attendues : hero-1080.mp4 (grand écran) et
-         hero-portrait.mp4 (téléphone, recadrée en 9:16). script.js choisit
-         la bonne au chargement selon la largeur d'écran. -->
-    <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg" data-src-desktop="assets/hero-1080.mp4" data-src-mobile="assets/hero-portrait.mp4">
+    <!-- Vidéo de fond, muette et décorative. Deux versions : hero-1080.mp4
+         (grand écran) et hero-portrait.mp4 (téléphone, 9:16). script.js
+         choisit la bonne au chargement, et ne lance rien si le visiteur a
+         activé « réduire les animations » (le poster reste affiché). -->
+    <video class="hero-video" id="heroVideo" muted loop playsinline preload="none" aria-hidden="true"
+           poster="assets/hero-poster.jpg"
+           data-poster-mobile="assets/hero-poster-portrait.jpg"
+           data-src-desktop="assets/hero-1080.mp4" data-src-mobile="assets/hero-portrait.mp4">
     </video>
   </div>
   <div class="hero-scrim"></div>
@@ -40,64 +79,437 @@
       <p class="role">Directeur de la photographie</p>
       <p class="role-travel">Paris — disponible pour tournages à l'international</p>
     </div>
-    <button class="hero-play" id="heroPlay" aria-label="Voir la bande démo avec le son">
+    <button type="button" class="hero-play" id="heroPlay" aria-haspopup="dialog" aria-controls="videoModal">
       <span class="hero-play-label">Voir la bande démo</span>
-</button>
+    </button>
+    <button type="button" class="hero-pause" id="heroPause" aria-pressed="false">Pause</button>
   </div>
 </section>
 
-<main>
-  <div class="project-list" id="projectList"></div>
+<main id="main" tabindex="-1">
+  <h2 class="visually-hidden">Projets récents</h2>
+  <div class="project-list" id="projectList">
+<!-- PROJETS:DEBUT — bloc généré par build-projects.py, ne pas modifier à la main -->
+    <article class="project-row">
+      <div class="project-block">
+        <div class="project-meta">
+          <h3 class="display"><a class="project-link" href="projets/l-odeur-de-l-ete/">L&#x27;Odeur de l&#x27;Été</a></h3>
+          <p class="type">court-métrage</p>
+          <p class="credit">écrit et réalisé par Bastien Louessard</p>
+          <p class="credit prod">Produit par Asmar Productions x OMEN Films</p>
+          <p class="diffusion">En post-production</p>
+        </div>
+        <div class="stills-wrap">
+          <button type="button" class="stills-arrow stills-prev" data-shift="-1" data-shift-project="0" aria-label="Photos précédentes de L&#x27;Odeur de l&#x27;Été">‹</button>
+          <div class="stills" data-project-stills="0">
+          <button type="button" data-project="0" data-index="0" aria-label="Agrandir : Photogramme 1 de L&#x27;Odeur de l&#x27;Été (court-métrage, écrit et réalisé par Bastien Louessard)"><img src="assets/stills/l-odeur-de-l-ete/01.jpg" srcset="assets/stills/l-odeur-de-l-ete/01-480.jpg 480w, assets/stills/l-odeur-de-l-ete/01-960.jpg 960w, assets/stills/l-odeur-de-l-ete/01-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="344" loading="lazy" alt="Photogramme 1 de L&#x27;Odeur de l&#x27;Été (court-métrage, écrit et réalisé par Bastien Louessard)"></button>
+          <button type="button" data-project="0" data-index="1" aria-label="Agrandir : Photogramme 2 de L&#x27;Odeur de l&#x27;Été (court-métrage, écrit et réalisé par Bastien Louessard)"><img src="assets/stills/l-odeur-de-l-ete/02.jpg" srcset="assets/stills/l-odeur-de-l-ete/02-480.jpg 480w, assets/stills/l-odeur-de-l-ete/02-960.jpg 960w, assets/stills/l-odeur-de-l-ete/02-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="344" loading="lazy" alt="Photogramme 2 de L&#x27;Odeur de l&#x27;Été (court-métrage, écrit et réalisé par Bastien Louessard)"></button>
+          <button type="button" data-project="0" data-index="2" aria-label="Agrandir : Photogramme 3 de L&#x27;Odeur de l&#x27;Été (court-métrage, écrit et réalisé par Bastien Louessard)"><img src="assets/stills/l-odeur-de-l-ete/03.jpg" srcset="assets/stills/l-odeur-de-l-ete/03-480.jpg 480w, assets/stills/l-odeur-de-l-ete/03-960.jpg 960w, assets/stills/l-odeur-de-l-ete/03-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="344" loading="lazy" alt="Photogramme 3 de L&#x27;Odeur de l&#x27;Été (court-métrage, écrit et réalisé par Bastien Louessard)"></button>
+          <button type="button" data-project="0" data-index="3" aria-label="Agrandir : Photogramme 4 de L&#x27;Odeur de l&#x27;Été (court-métrage, écrit et réalisé par Bastien Louessard)"><img src="assets/stills/l-odeur-de-l-ete/04.jpg" srcset="assets/stills/l-odeur-de-l-ete/04-480.jpg 480w, assets/stills/l-odeur-de-l-ete/04-960.jpg 960w, assets/stills/l-odeur-de-l-ete/04-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="344" loading="lazy" alt="Photogramme 4 de L&#x27;Odeur de l&#x27;Été (court-métrage, écrit et réalisé par Bastien Louessard)"></button>
+          <button type="button" data-project="0" data-index="4" aria-label="Agrandir : Photogramme 5 de L&#x27;Odeur de l&#x27;Été (court-métrage, écrit et réalisé par Bastien Louessard)"><img src="assets/stills/l-odeur-de-l-ete/05.jpg" srcset="assets/stills/l-odeur-de-l-ete/05-480.jpg 480w, assets/stills/l-odeur-de-l-ete/05-960.jpg 960w, assets/stills/l-odeur-de-l-ete/05-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="344" loading="lazy" alt="Photogramme 5 de L&#x27;Odeur de l&#x27;Été (court-métrage, écrit et réalisé par Bastien Louessard)"></button>
+          <button type="button" data-project="0" data-index="5" aria-label="Agrandir : Photogramme 6 de L&#x27;Odeur de l&#x27;Été (court-métrage, écrit et réalisé par Bastien Louessard)"><img src="assets/stills/l-odeur-de-l-ete/06.jpg" srcset="assets/stills/l-odeur-de-l-ete/06-480.jpg 480w, assets/stills/l-odeur-de-l-ete/06-960.jpg 960w, assets/stills/l-odeur-de-l-ete/06-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="344" loading="lazy" alt="Photogramme 6 de L&#x27;Odeur de l&#x27;Été (court-métrage, écrit et réalisé par Bastien Louessard)"></button>
+          <button type="button" data-project="0" data-index="6" aria-label="Agrandir : Photogramme 7 de L&#x27;Odeur de l&#x27;Été (court-métrage, écrit et réalisé par Bastien Louessard)"><img src="assets/stills/l-odeur-de-l-ete/07.jpg" srcset="assets/stills/l-odeur-de-l-ete/07-480.jpg 480w, assets/stills/l-odeur-de-l-ete/07-960.jpg 960w, assets/stills/l-odeur-de-l-ete/07-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="344" loading="lazy" alt="Photogramme 7 de L&#x27;Odeur de l&#x27;Été (court-métrage, écrit et réalisé par Bastien Louessard)"></button>
+          <button type="button" data-project="0" data-index="7" aria-label="Agrandir : Photogramme 8 de L&#x27;Odeur de l&#x27;Été (court-métrage, écrit et réalisé par Bastien Louessard)"><img src="assets/stills/l-odeur-de-l-ete/08.jpg" srcset="assets/stills/l-odeur-de-l-ete/08-480.jpg 480w, assets/stills/l-odeur-de-l-ete/08-960.jpg 960w, assets/stills/l-odeur-de-l-ete/08-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="344" loading="lazy" alt="Photogramme 8 de L&#x27;Odeur de l&#x27;Été (court-métrage, écrit et réalisé par Bastien Louessard)"></button>
+          <button type="button" data-project="0" data-index="8" aria-label="Agrandir : Photogramme 9 de L&#x27;Odeur de l&#x27;Été (court-métrage, écrit et réalisé par Bastien Louessard)"><img src="assets/stills/l-odeur-de-l-ete/09.jpg" srcset="assets/stills/l-odeur-de-l-ete/09-480.jpg 480w, assets/stills/l-odeur-de-l-ete/09-960.jpg 960w, assets/stills/l-odeur-de-l-ete/09-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="636" height="344" loading="lazy" alt="Photogramme 9 de L&#x27;Odeur de l&#x27;Été (court-métrage, écrit et réalisé par Bastien Louessard)"></button>
+          </div>
+          <button type="button" class="stills-arrow stills-next" data-shift="1" data-shift-project="0" aria-label="Photos suivantes de L&#x27;Odeur de l&#x27;Été">›</button>
+        </div>
+      </div>
+    </article>
+    <article class="project-row">
+      <div class="project-block">
+        <div class="project-meta">
+          <h3 class="display"><a class="project-link" href="projets/rose-d-hiver/">Rose d&#x27;Hiver</a></h3>
+          <p class="type">court-métrage</p>
+          <p class="credit">écrit et réalisé par Alexis Rousseau</p>
+          <p class="credit prod">Produit par OMEN Films</p>
+        </div>
+        <div class="stills-wrap">
+          <button type="button" class="stills-arrow stills-prev" data-shift="-1" data-shift-project="1" aria-label="Photos précédentes de Rose d&#x27;Hiver">‹</button>
+          <div class="stills" data-project-stills="1">
+          <button type="button" data-project="1" data-index="0" aria-label="Agrandir : Photogramme 1 de Rose d&#x27;Hiver (court-métrage, écrit et réalisé par Alexis Rousseau)"><img src="assets/stills/rose-d-hiver/01.jpg" srcset="assets/stills/rose-d-hiver/01-480.jpg 480w, assets/stills/rose-d-hiver/01-960.jpg 960w, assets/stills/rose-d-hiver/01-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="272" loading="lazy" alt="Photogramme 1 de Rose d&#x27;Hiver (court-métrage, écrit et réalisé par Alexis Rousseau)"></button>
+          <button type="button" data-project="1" data-index="1" aria-label="Agrandir : Photogramme 2 de Rose d&#x27;Hiver (court-métrage, écrit et réalisé par Alexis Rousseau)"><img src="assets/stills/rose-d-hiver/02.jpg" srcset="assets/stills/rose-d-hiver/02-480.jpg 480w, assets/stills/rose-d-hiver/02-960.jpg 960w, assets/stills/rose-d-hiver/02-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="272" loading="lazy" alt="Photogramme 2 de Rose d&#x27;Hiver (court-métrage, écrit et réalisé par Alexis Rousseau)"></button>
+          <button type="button" data-project="1" data-index="2" aria-label="Agrandir : Photogramme 3 de Rose d&#x27;Hiver (court-métrage, écrit et réalisé par Alexis Rousseau)"><img src="assets/stills/rose-d-hiver/03.jpg" srcset="assets/stills/rose-d-hiver/03-480.jpg 480w, assets/stills/rose-d-hiver/03-960.jpg 960w, assets/stills/rose-d-hiver/03-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="272" loading="lazy" alt="Photogramme 3 de Rose d&#x27;Hiver (court-métrage, écrit et réalisé par Alexis Rousseau)"></button>
+          <button type="button" data-project="1" data-index="3" aria-label="Agrandir : Photogramme 4 de Rose d&#x27;Hiver (court-métrage, écrit et réalisé par Alexis Rousseau)"><img src="assets/stills/rose-d-hiver/04.jpg" srcset="assets/stills/rose-d-hiver/04-480.jpg 480w, assets/stills/rose-d-hiver/04-960.jpg 960w, assets/stills/rose-d-hiver/04-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="272" loading="lazy" alt="Photogramme 4 de Rose d&#x27;Hiver (court-métrage, écrit et réalisé par Alexis Rousseau)"></button>
+          <button type="button" data-project="1" data-index="4" aria-label="Agrandir : Photogramme 5 de Rose d&#x27;Hiver (court-métrage, écrit et réalisé par Alexis Rousseau)"><img src="assets/stills/rose-d-hiver/05.jpg" srcset="assets/stills/rose-d-hiver/05-480.jpg 480w, assets/stills/rose-d-hiver/05-960.jpg 960w, assets/stills/rose-d-hiver/05-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="272" loading="lazy" alt="Photogramme 5 de Rose d&#x27;Hiver (court-métrage, écrit et réalisé par Alexis Rousseau)"></button>
+          <button type="button" data-project="1" data-index="5" aria-label="Agrandir : Photogramme 6 de Rose d&#x27;Hiver (court-métrage, écrit et réalisé par Alexis Rousseau)"><img src="assets/stills/rose-d-hiver/06.jpg" srcset="assets/stills/rose-d-hiver/06-480.jpg 480w, assets/stills/rose-d-hiver/06-960.jpg 960w, assets/stills/rose-d-hiver/06-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="272" loading="lazy" alt="Photogramme 6 de Rose d&#x27;Hiver (court-métrage, écrit et réalisé par Alexis Rousseau)"></button>
+          </div>
+          <button type="button" class="stills-arrow stills-next" data-shift="1" data-shift-project="1" aria-label="Photos suivantes de Rose d&#x27;Hiver">›</button>
+        </div>
+      </div>
+    </article>
+    <article class="project-row">
+      <div class="project-block">
+        <div class="project-meta">
+          <h3 class="display"><a class="project-link" href="projets/bvlgari/">Bvlgari</a></h3>
+          <p class="type">publicité</p>
+          <p class="credit">réalisé par Corentin Huard</p>
+          <p class="credit prod">Produit par 1001 Films Productions</p>
+        </div>
+        <div class="stills-wrap">
+          <button type="button" class="stills-arrow stills-prev" data-shift="-1" data-shift-project="2" aria-label="Photos précédentes de Bvlgari">‹</button>
+          <div class="stills" data-project-stills="2">
+          <button type="button" data-project="2" data-index="0" aria-label="Agrandir : Photogramme 1 de Bvlgari (publicité, réalisé par Corentin Huard)"><img src="assets/stills/bvlgari/01.jpg" srcset="assets/stills/bvlgari/01-480.jpg 480w, assets/stills/bvlgari/01-960.jpg 960w, assets/stills/bvlgari/01-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="272" loading="lazy" alt="Photogramme 1 de Bvlgari (publicité, réalisé par Corentin Huard)"></button>
+          <button type="button" data-project="2" data-index="1" aria-label="Agrandir : Photogramme 2 de Bvlgari (publicité, réalisé par Corentin Huard)"><img src="assets/stills/bvlgari/02.jpg" srcset="assets/stills/bvlgari/02-480.jpg 480w, assets/stills/bvlgari/02-960.jpg 960w, assets/stills/bvlgari/02-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="272" loading="lazy" alt="Photogramme 2 de Bvlgari (publicité, réalisé par Corentin Huard)"></button>
+          <button type="button" data-project="2" data-index="2" aria-label="Agrandir : Photogramme 3 de Bvlgari (publicité, réalisé par Corentin Huard)"><img src="assets/stills/bvlgari/03.jpg" srcset="assets/stills/bvlgari/03-480.jpg 480w, assets/stills/bvlgari/03-960.jpg 960w, assets/stills/bvlgari/03-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="272" loading="lazy" alt="Photogramme 3 de Bvlgari (publicité, réalisé par Corentin Huard)"></button>
+          </div>
+          <button type="button" class="stills-arrow stills-next" data-shift="1" data-shift-project="2" aria-label="Photos suivantes de Bvlgari">›</button>
+        </div>
+      </div>
+    </article>
+    <article class="project-row">
+      <div class="project-block">
+        <div class="project-meta">
+          <h3 class="display"><a class="project-link" href="projets/sur-le-sentier/">Sur le Sentier</a></h3>
+          <p class="type">long-métrage</p>
+          <p class="credit">écrit et réalisé par Gérard Jumel</p>
+          <p class="credit prod">Produit par Jour J Productions</p>
+          <p class="diffusion">Sorti en salles en avril 2026</p>
+        </div>
+        <div class="stills-wrap">
+          <button type="button" class="stills-arrow stills-prev" data-shift="-1" data-shift-project="3" aria-label="Photos précédentes de Sur le Sentier">‹</button>
+          <div class="stills" data-project-stills="3">
+          <button type="button" data-project="3" data-index="0" aria-label="Agrandir : Photogramme 1 de Sur le Sentier (long-métrage, écrit et réalisé par Gérard Jumel)"><img src="assets/stills/sur-le-sentier/01.jpg" srcset="assets/stills/sur-le-sentier/01-480.jpg 480w, assets/stills/sur-le-sentier/01-960.jpg 960w, assets/stills/sur-le-sentier/01-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="362" loading="lazy" alt="Photogramme 1 de Sur le Sentier (long-métrage, écrit et réalisé par Gérard Jumel)"></button>
+          <button type="button" data-project="3" data-index="1" aria-label="Agrandir : Photogramme 2 de Sur le Sentier (long-métrage, écrit et réalisé par Gérard Jumel)"><img src="assets/stills/sur-le-sentier/02.jpg" srcset="assets/stills/sur-le-sentier/02-480.jpg 480w, assets/stills/sur-le-sentier/02-960.jpg 960w, assets/stills/sur-le-sentier/02-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="362" loading="lazy" alt="Photogramme 2 de Sur le Sentier (long-métrage, écrit et réalisé par Gérard Jumel)"></button>
+          <button type="button" data-project="3" data-index="2" aria-label="Agrandir : Photogramme 3 de Sur le Sentier (long-métrage, écrit et réalisé par Gérard Jumel)"><img src="assets/stills/sur-le-sentier/03.jpg" srcset="assets/stills/sur-le-sentier/03-480.jpg 480w, assets/stills/sur-le-sentier/03-960.jpg 960w, assets/stills/sur-le-sentier/03-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="362" loading="lazy" alt="Photogramme 3 de Sur le Sentier (long-métrage, écrit et réalisé par Gérard Jumel)"></button>
+          <button type="button" data-project="3" data-index="3" aria-label="Agrandir : Photogramme 4 de Sur le Sentier (long-métrage, écrit et réalisé par Gérard Jumel)"><img src="assets/stills/sur-le-sentier/04.jpg" srcset="assets/stills/sur-le-sentier/04-480.jpg 480w, assets/stills/sur-le-sentier/04-960.jpg 960w, assets/stills/sur-le-sentier/04-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="362" loading="lazy" alt="Photogramme 4 de Sur le Sentier (long-métrage, écrit et réalisé par Gérard Jumel)"></button>
+          <button type="button" data-project="3" data-index="4" aria-label="Agrandir : Photogramme 5 de Sur le Sentier (long-métrage, écrit et réalisé par Gérard Jumel)"><img src="assets/stills/sur-le-sentier/05.jpg" srcset="assets/stills/sur-le-sentier/05-480.jpg 480w, assets/stills/sur-le-sentier/05-960.jpg 960w, assets/stills/sur-le-sentier/05-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="362" loading="lazy" alt="Photogramme 5 de Sur le Sentier (long-métrage, écrit et réalisé par Gérard Jumel)"></button>
+          <button type="button" data-project="3" data-index="5" aria-label="Agrandir : Photogramme 6 de Sur le Sentier (long-métrage, écrit et réalisé par Gérard Jumel)"><img src="assets/stills/sur-le-sentier/06.jpg" srcset="assets/stills/sur-le-sentier/06-480.jpg 480w, assets/stills/sur-le-sentier/06-960.jpg 960w, assets/stills/sur-le-sentier/06-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="362" loading="lazy" alt="Photogramme 6 de Sur le Sentier (long-métrage, écrit et réalisé par Gérard Jumel)"></button>
+          </div>
+          <button type="button" class="stills-arrow stills-next" data-shift="1" data-shift-project="3" aria-label="Photos suivantes de Sur le Sentier">›</button>
+        </div>
+      </div>
+    </article>
+    <article class="project-row">
+      <div class="project-block">
+        <div class="project-meta">
+          <h3 class="display"><a class="project-link" href="projets/pietragalla-danse-barbara/">Pietragalla Danse Barbara</a></h3>
+          <p class="type">teaser promotionnel — danse</p>
+          <p class="credit">mis en scène par Julien Derouault &amp; Marie-Claude Pietragalla</p>
+          <p class="credit prod">Seul en scène de Pietra — Le Théâtre du Corps Pietragalla-Derouault</p>
+        </div>
+        <div class="stills-wrap">
+          <button type="button" class="stills-arrow stills-prev" data-shift="-1" data-shift-project="4" aria-label="Photos précédentes de Pietragalla Danse Barbara">‹</button>
+          <div class="stills" data-project-stills="4">
+          <button type="button" data-project="4" data-index="0" aria-label="Agrandir : Photogramme 1 de Pietragalla Danse Barbara (teaser promotionnel — danse, mis en scène par Julien Derouault &amp; Marie-Claude Pietragalla)"><img src="assets/stills/pietragalla-danse-barbara/01.jpg" srcset="assets/stills/pietragalla-danse-barbara/01-480.jpg 480w, assets/stills/pietragalla-danse-barbara/01-960.jpg 960w, assets/stills/pietragalla-danse-barbara/01-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="646" height="272" loading="lazy" alt="Photogramme 1 de Pietragalla Danse Barbara (teaser promotionnel — danse, mis en scène par Julien Derouault &amp; Marie-Claude Pietragalla)"></button>
+          <button type="button" data-project="4" data-index="1" aria-label="Agrandir : Photogramme 2 de Pietragalla Danse Barbara (teaser promotionnel — danse, mis en scène par Julien Derouault &amp; Marie-Claude Pietragalla)"><img src="assets/stills/pietragalla-danse-barbara/02.jpg" srcset="assets/stills/pietragalla-danse-barbara/02-480.jpg 480w, assets/stills/pietragalla-danse-barbara/02-960.jpg 960w, assets/stills/pietragalla-danse-barbara/02-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="646" height="272" loading="lazy" alt="Photogramme 2 de Pietragalla Danse Barbara (teaser promotionnel — danse, mis en scène par Julien Derouault &amp; Marie-Claude Pietragalla)"></button>
+          <button type="button" data-project="4" data-index="2" aria-label="Agrandir : Photogramme 3 de Pietragalla Danse Barbara (teaser promotionnel — danse, mis en scène par Julien Derouault &amp; Marie-Claude Pietragalla)"><img src="assets/stills/pietragalla-danse-barbara/03.jpg" srcset="assets/stills/pietragalla-danse-barbara/03-480.jpg 480w, assets/stills/pietragalla-danse-barbara/03-960.jpg 960w, assets/stills/pietragalla-danse-barbara/03-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="646" height="272" loading="lazy" alt="Photogramme 3 de Pietragalla Danse Barbara (teaser promotionnel — danse, mis en scène par Julien Derouault &amp; Marie-Claude Pietragalla)"></button>
+          <button type="button" data-project="4" data-index="3" aria-label="Agrandir : Photogramme 4 de Pietragalla Danse Barbara (teaser promotionnel — danse, mis en scène par Julien Derouault &amp; Marie-Claude Pietragalla)"><img src="assets/stills/pietragalla-danse-barbara/04.jpg" srcset="assets/stills/pietragalla-danse-barbara/04-480.jpg 480w, assets/stills/pietragalla-danse-barbara/04-960.jpg 960w, assets/stills/pietragalla-danse-barbara/04-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="646" height="272" loading="lazy" alt="Photogramme 4 de Pietragalla Danse Barbara (teaser promotionnel — danse, mis en scène par Julien Derouault &amp; Marie-Claude Pietragalla)"></button>
+          <button type="button" data-project="4" data-index="4" aria-label="Agrandir : Photogramme 5 de Pietragalla Danse Barbara (teaser promotionnel — danse, mis en scène par Julien Derouault &amp; Marie-Claude Pietragalla)"><img src="assets/stills/pietragalla-danse-barbara/05.jpg" srcset="assets/stills/pietragalla-danse-barbara/05-480.jpg 480w, assets/stills/pietragalla-danse-barbara/05-960.jpg 960w, assets/stills/pietragalla-danse-barbara/05-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="646" height="272" loading="lazy" alt="Photogramme 5 de Pietragalla Danse Barbara (teaser promotionnel — danse, mis en scène par Julien Derouault &amp; Marie-Claude Pietragalla)"></button>
+          <button type="button" data-project="4" data-index="5" aria-label="Agrandir : Photogramme 6 de Pietragalla Danse Barbara (teaser promotionnel — danse, mis en scène par Julien Derouault &amp; Marie-Claude Pietragalla)"><img src="assets/stills/pietragalla-danse-barbara/06.jpg" srcset="assets/stills/pietragalla-danse-barbara/06-480.jpg 480w, assets/stills/pietragalla-danse-barbara/06-960.jpg 960w, assets/stills/pietragalla-danse-barbara/06-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="646" height="272" loading="lazy" alt="Photogramme 6 de Pietragalla Danse Barbara (teaser promotionnel — danse, mis en scène par Julien Derouault &amp; Marie-Claude Pietragalla)"></button>
+          <button type="button" data-project="4" data-index="6" aria-label="Agrandir : Photogramme 7 de Pietragalla Danse Barbara (teaser promotionnel — danse, mis en scène par Julien Derouault &amp; Marie-Claude Pietragalla)"><img src="assets/stills/pietragalla-danse-barbara/07.jpg" srcset="assets/stills/pietragalla-danse-barbara/07-480.jpg 480w, assets/stills/pietragalla-danse-barbara/07-960.jpg 960w, assets/stills/pietragalla-danse-barbara/07-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="272" loading="lazy" alt="Photogramme 7 de Pietragalla Danse Barbara (teaser promotionnel — danse, mis en scène par Julien Derouault &amp; Marie-Claude Pietragalla)"></button>
+          <button type="button" data-project="4" data-index="7" aria-label="Agrandir : Photogramme 8 de Pietragalla Danse Barbara (teaser promotionnel — danse, mis en scène par Julien Derouault &amp; Marie-Claude Pietragalla)"><img src="assets/stills/pietragalla-danse-barbara/08.jpg" srcset="assets/stills/pietragalla-danse-barbara/08-480.jpg 480w, assets/stills/pietragalla-danse-barbara/08-960.jpg 960w, assets/stills/pietragalla-danse-barbara/08-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="272" loading="lazy" alt="Photogramme 8 de Pietragalla Danse Barbara (teaser promotionnel — danse, mis en scène par Julien Derouault &amp; Marie-Claude Pietragalla)"></button>
+          <button type="button" data-project="4" data-index="8" aria-label="Agrandir : Photogramme 9 de Pietragalla Danse Barbara (teaser promotionnel — danse, mis en scène par Julien Derouault &amp; Marie-Claude Pietragalla)"><img src="assets/stills/pietragalla-danse-barbara/09.jpg" srcset="assets/stills/pietragalla-danse-barbara/09-480.jpg 480w, assets/stills/pietragalla-danse-barbara/09-960.jpg 960w, assets/stills/pietragalla-danse-barbara/09-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="272" loading="lazy" alt="Photogramme 9 de Pietragalla Danse Barbara (teaser promotionnel — danse, mis en scène par Julien Derouault &amp; Marie-Claude Pietragalla)"></button>
+          <button type="button" data-project="4" data-index="9" aria-label="Agrandir : Photogramme 10 de Pietragalla Danse Barbara (teaser promotionnel — danse, mis en scène par Julien Derouault &amp; Marie-Claude Pietragalla)"><img src="assets/stills/pietragalla-danse-barbara/10.jpg" srcset="assets/stills/pietragalla-danse-barbara/10-480.jpg 480w, assets/stills/pietragalla-danse-barbara/10-960.jpg 960w, assets/stills/pietragalla-danse-barbara/10-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="272" loading="lazy" alt="Photogramme 10 de Pietragalla Danse Barbara (teaser promotionnel — danse, mis en scène par Julien Derouault &amp; Marie-Claude Pietragalla)"></button>
+          <button type="button" data-project="4" data-index="10" aria-label="Agrandir : Photogramme 11 de Pietragalla Danse Barbara (teaser promotionnel — danse, mis en scène par Julien Derouault &amp; Marie-Claude Pietragalla)"><img src="assets/stills/pietragalla-danse-barbara/11.jpg" srcset="assets/stills/pietragalla-danse-barbara/11-480.jpg 480w, assets/stills/pietragalla-danse-barbara/11-960.jpg 960w, assets/stills/pietragalla-danse-barbara/11-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="272" loading="lazy" alt="Photogramme 11 de Pietragalla Danse Barbara (teaser promotionnel — danse, mis en scène par Julien Derouault &amp; Marie-Claude Pietragalla)"></button>
+          </div>
+          <button type="button" class="stills-arrow stills-next" data-shift="1" data-shift-project="4" aria-label="Photos suivantes de Pietragalla Danse Barbara">›</button>
+        </div>
+      </div>
+    </article>
+    <article class="project-row">
+      <div class="project-block">
+        <div class="project-meta">
+          <h3 class="display"><a class="project-link" href="projets/osef-le-paradis/">OSEF Le Paradis</a></h3>
+          <p class="type">court-métrage</p>
+          <p class="credit">réalisé par Quentin Dufournet-Charles</p>
+          <p class="credit prod">Produit par Pimento Films avec le soutien du CNC et d&#x27;Arte</p>
+          <p class="diffusion">Diffusion TV et streaming sur Arte</p>
+        </div>
+        <div class="stills-wrap">
+          <button type="button" class="stills-arrow stills-prev" data-shift="-1" data-shift-project="5" aria-label="Photos précédentes de OSEF Le Paradis">‹</button>
+          <div class="stills" data-project-stills="5">
+          <button type="button" data-project="5" data-index="0" aria-label="Agrandir : Photogramme 1 de OSEF Le Paradis (court-métrage, réalisé par Quentin Dufournet-Charles)"><img src="assets/stills/osef-le-paradis/01.jpg" srcset="assets/stills/osef-le-paradis/01-480.jpg 480w, assets/stills/osef-le-paradis/01-960.jpg 960w, assets/stills/osef-le-paradis/01-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="272" loading="lazy" alt="Photogramme 1 de OSEF Le Paradis (court-métrage, réalisé par Quentin Dufournet-Charles)"></button>
+          <button type="button" data-project="5" data-index="1" aria-label="Agrandir : Photogramme 2 de OSEF Le Paradis (court-métrage, réalisé par Quentin Dufournet-Charles)"><img src="assets/stills/osef-le-paradis/02.jpg" srcset="assets/stills/osef-le-paradis/02-480.jpg 480w, assets/stills/osef-le-paradis/02-960.jpg 960w, assets/stills/osef-le-paradis/02-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="272" loading="lazy" alt="Photogramme 2 de OSEF Le Paradis (court-métrage, réalisé par Quentin Dufournet-Charles)"></button>
+          <button type="button" data-project="5" data-index="2" aria-label="Agrandir : Photogramme 3 de OSEF Le Paradis (court-métrage, réalisé par Quentin Dufournet-Charles)"><img src="assets/stills/osef-le-paradis/03.jpg" srcset="assets/stills/osef-le-paradis/03-480.jpg 480w, assets/stills/osef-le-paradis/03-960.jpg 960w, assets/stills/osef-le-paradis/03-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="272" loading="lazy" alt="Photogramme 3 de OSEF Le Paradis (court-métrage, réalisé par Quentin Dufournet-Charles)"></button>
+          <button type="button" data-project="5" data-index="3" aria-label="Agrandir : Photogramme 4 de OSEF Le Paradis (court-métrage, réalisé par Quentin Dufournet-Charles)"><img src="assets/stills/osef-le-paradis/04.jpg" srcset="assets/stills/osef-le-paradis/04-480.jpg 480w, assets/stills/osef-le-paradis/04-960.jpg 960w, assets/stills/osef-le-paradis/04-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="272" loading="lazy" alt="Photogramme 4 de OSEF Le Paradis (court-métrage, réalisé par Quentin Dufournet-Charles)"></button>
+          <button type="button" data-project="5" data-index="4" aria-label="Agrandir : Photogramme 5 de OSEF Le Paradis (court-métrage, réalisé par Quentin Dufournet-Charles)"><img src="assets/stills/osef-le-paradis/05.jpg" srcset="assets/stills/osef-le-paradis/05-480.jpg 480w, assets/stills/osef-le-paradis/05-960.jpg 960w, assets/stills/osef-le-paradis/05-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="272" loading="lazy" alt="Photogramme 5 de OSEF Le Paradis (court-métrage, réalisé par Quentin Dufournet-Charles)"></button>
+          <button type="button" data-project="5" data-index="5" aria-label="Agrandir : Photogramme 6 de OSEF Le Paradis (court-métrage, réalisé par Quentin Dufournet-Charles)"><img src="assets/stills/osef-le-paradis/06.jpg" srcset="assets/stills/osef-le-paradis/06-480.jpg 480w, assets/stills/osef-le-paradis/06-960.jpg 960w, assets/stills/osef-le-paradis/06-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="272" loading="lazy" alt="Photogramme 6 de OSEF Le Paradis (court-métrage, réalisé par Quentin Dufournet-Charles)"></button>
+          </div>
+          <button type="button" class="stills-arrow stills-next" data-shift="1" data-shift-project="5" aria-label="Photos suivantes de OSEF Le Paradis">›</button>
+        </div>
+      </div>
+    </article>
+    <article class="project-row">
+      <div class="project-block">
+        <div class="project-meta">
+          <h3 class="display"><a class="project-link" href="projets/des-vacances-a-tout-prix/">Des Vacances à Tout Prix</a></h3>
+          <p class="type">long-métrage</p>
+          <p class="credit">réalisé par Stevan Lee Mraovitch</p>
+          <p class="credit prod">Produit par Charlotte Russe Films avec le soutien du CNC</p>
+          <p class="diffusion">Festivals internationaux, streaming sur Tubi (États-Unis)</p>
+        </div>
+        <div class="stills-wrap">
+          <button type="button" class="stills-arrow stills-prev" data-shift="-1" data-shift-project="6" aria-label="Photos précédentes de Des Vacances à Tout Prix">‹</button>
+          <div class="stills" data-project-stills="6">
+          <button type="button" data-project="6" data-index="0" aria-label="Agrandir : Photogramme 1 de Des Vacances à Tout Prix (long-métrage, réalisé par Stevan Lee Mraovitch)"><img src="assets/stills/des-vacances-a-tout-prix/01.jpg" srcset="assets/stills/des-vacances-a-tout-prix/01-480.jpg 480w, assets/stills/des-vacances-a-tout-prix/01-960.jpg 960w, assets/stills/des-vacances-a-tout-prix/01-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="642" height="332" loading="lazy" alt="Photogramme 1 de Des Vacances à Tout Prix (long-métrage, réalisé par Stevan Lee Mraovitch)"></button>
+          <button type="button" data-project="6" data-index="1" aria-label="Agrandir : Photogramme 2 de Des Vacances à Tout Prix (long-métrage, réalisé par Stevan Lee Mraovitch)"><img src="assets/stills/des-vacances-a-tout-prix/02.jpg" srcset="assets/stills/des-vacances-a-tout-prix/02-480.jpg 480w, assets/stills/des-vacances-a-tout-prix/02-960.jpg 960w, assets/stills/des-vacances-a-tout-prix/02-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="332" loading="lazy" alt="Photogramme 2 de Des Vacances à Tout Prix (long-métrage, réalisé par Stevan Lee Mraovitch)"></button>
+          <button type="button" data-project="6" data-index="2" aria-label="Agrandir : Photogramme 3 de Des Vacances à Tout Prix (long-métrage, réalisé par Stevan Lee Mraovitch)"><img src="assets/stills/des-vacances-a-tout-prix/03.jpg" srcset="assets/stills/des-vacances-a-tout-prix/03-480.jpg 480w, assets/stills/des-vacances-a-tout-prix/03-960.jpg 960w, assets/stills/des-vacances-a-tout-prix/03-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="332" loading="lazy" alt="Photogramme 3 de Des Vacances à Tout Prix (long-métrage, réalisé par Stevan Lee Mraovitch)"></button>
+          <button type="button" data-project="6" data-index="3" aria-label="Agrandir : Photogramme 4 de Des Vacances à Tout Prix (long-métrage, réalisé par Stevan Lee Mraovitch)"><img src="assets/stills/des-vacances-a-tout-prix/04.jpg" srcset="assets/stills/des-vacances-a-tout-prix/04-480.jpg 480w, assets/stills/des-vacances-a-tout-prix/04-960.jpg 960w, assets/stills/des-vacances-a-tout-prix/04-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="332" loading="lazy" alt="Photogramme 4 de Des Vacances à Tout Prix (long-métrage, réalisé par Stevan Lee Mraovitch)"></button>
+          <button type="button" data-project="6" data-index="4" aria-label="Agrandir : Photogramme 5 de Des Vacances à Tout Prix (long-métrage, réalisé par Stevan Lee Mraovitch)"><img src="assets/stills/des-vacances-a-tout-prix/05.jpg" srcset="assets/stills/des-vacances-a-tout-prix/05-480.jpg 480w, assets/stills/des-vacances-a-tout-prix/05-960.jpg 960w, assets/stills/des-vacances-a-tout-prix/05-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="638" height="332" loading="lazy" alt="Photogramme 5 de Des Vacances à Tout Prix (long-métrage, réalisé par Stevan Lee Mraovitch)"></button>
+          <button type="button" data-project="6" data-index="5" aria-label="Agrandir : Photogramme 6 de Des Vacances à Tout Prix (long-métrage, réalisé par Stevan Lee Mraovitch)"><img src="assets/stills/des-vacances-a-tout-prix/06.jpg" srcset="assets/stills/des-vacances-a-tout-prix/06-480.jpg 480w, assets/stills/des-vacances-a-tout-prix/06-960.jpg 960w, assets/stills/des-vacances-a-tout-prix/06-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="648" height="332" loading="lazy" alt="Photogramme 6 de Des Vacances à Tout Prix (long-métrage, réalisé par Stevan Lee Mraovitch)"></button>
+          </div>
+          <button type="button" class="stills-arrow stills-next" data-shift="1" data-shift-project="6" aria-label="Photos suivantes de Des Vacances à Tout Prix">›</button>
+        </div>
+      </div>
+    </article>
+    <article class="project-row">
+      <div class="project-block">
+        <div class="project-meta">
+          <h3 class="display"><a class="project-link" href="projets/fario/">Fario</a></h3>
+          <p class="type">long-métrage</p>
+          <p class="credit">réalisé par Gérard Jumel</p>
+          <p class="credit prod">Produit par Jour J Productions</p>
+          <p class="diffusion">Festivals et sortie en salles art et essai</p>
+        </div>
+        <div class="stills-wrap">
+          <button type="button" class="stills-arrow stills-prev" data-shift="-1" data-shift-project="7" aria-label="Photos précédentes de Fario">‹</button>
+          <div class="stills" data-project-stills="7">
+          <button type="button" data-project="7" data-index="0" aria-label="Agrandir : Photogramme 1 de Fario (long-métrage, réalisé par Gérard Jumel)"><img src="assets/stills/fario/01.jpg" srcset="assets/stills/fario/01-480.jpg 480w, assets/stills/fario/01-960.jpg 960w, assets/stills/fario/01-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="646" height="266" loading="lazy" alt="Photogramme 1 de Fario (long-métrage, réalisé par Gérard Jumel)"></button>
+          <button type="button" data-project="7" data-index="1" aria-label="Agrandir : Photogramme 2 de Fario (long-métrage, réalisé par Gérard Jumel)"><img src="assets/stills/fario/02.jpg" srcset="assets/stills/fario/02-480.jpg 480w, assets/stills/fario/02-960.jpg 960w, assets/stills/fario/02-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="646" height="266" loading="lazy" alt="Photogramme 2 de Fario (long-métrage, réalisé par Gérard Jumel)"></button>
+          <button type="button" data-project="7" data-index="2" aria-label="Agrandir : Photogramme 3 de Fario (long-métrage, réalisé par Gérard Jumel)"><img src="assets/stills/fario/03.jpg" srcset="assets/stills/fario/03-480.jpg 480w, assets/stills/fario/03-960.jpg 960w, assets/stills/fario/03-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="642" height="266" loading="lazy" alt="Photogramme 3 de Fario (long-métrage, réalisé par Gérard Jumel)"></button>
+          <button type="button" data-project="7" data-index="3" aria-label="Agrandir : Photogramme 4 de Fario (long-métrage, réalisé par Gérard Jumel)"><img src="assets/stills/fario/04.jpg" srcset="assets/stills/fario/04-480.jpg 480w, assets/stills/fario/04-960.jpg 960w, assets/stills/fario/04-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="640" height="266" loading="lazy" alt="Photogramme 4 de Fario (long-métrage, réalisé par Gérard Jumel)"></button>
+          <button type="button" data-project="7" data-index="4" aria-label="Agrandir : Photogramme 5 de Fario (long-métrage, réalisé par Gérard Jumel)"><img src="assets/stills/fario/05.jpg" srcset="assets/stills/fario/05-480.jpg 480w, assets/stills/fario/05-960.jpg 960w, assets/stills/fario/05-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="642" height="266" loading="lazy" alt="Photogramme 5 de Fario (long-métrage, réalisé par Gérard Jumel)"></button>
+          <button type="button" data-project="7" data-index="5" aria-label="Agrandir : Photogramme 6 de Fario (long-métrage, réalisé par Gérard Jumel)"><img src="assets/stills/fario/06.jpg" srcset="assets/stills/fario/06-480.jpg 480w, assets/stills/fario/06-960.jpg 960w, assets/stills/fario/06-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="646" height="266" loading="lazy" alt="Photogramme 6 de Fario (long-métrage, réalisé par Gérard Jumel)"></button>
+          </div>
+          <button type="button" class="stills-arrow stills-next" data-shift="1" data-shift-project="7" aria-label="Photos suivantes de Fario">›</button>
+        </div>
+      </div>
+    </article>
+    <article class="project-row">
+      <div class="project-block">
+        <div class="project-meta">
+          <h3 class="display"><a class="project-link" href="projets/far-cry-5-shadow/">Far Cry 5 — Shadow</a></h3>
+          <p class="type">publicité</p>
+          <p class="credit">réalisé par Léo Wolfenstein</p>
+          <p class="credit prod">Produit par Cléo Productions</p>
+        </div>
+        <div class="stills-wrap">
+          <button type="button" class="stills-arrow stills-prev" data-shift="-1" data-shift-project="8" aria-label="Photos précédentes de Far Cry 5 — Shadow">‹</button>
+          <div class="stills" data-project-stills="8">
+          <button type="button" data-project="8" data-index="0" aria-label="Agrandir : Photogramme 1 de Far Cry 5 — Shadow (publicité, réalisé par Léo Wolfenstein)"><img src="assets/stills/far-cry-5-shadow/01.jpg" srcset="assets/stills/far-cry-5-shadow/01-480.jpg 480w, assets/stills/far-cry-5-shadow/01-960.jpg 960w, assets/stills/far-cry-5-shadow/01-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="644" height="240" loading="lazy" alt="Photogramme 1 de Far Cry 5 — Shadow (publicité, réalisé par Léo Wolfenstein)"></button>
+          <button type="button" data-project="8" data-index="1" aria-label="Agrandir : Photogramme 2 de Far Cry 5 — Shadow (publicité, réalisé par Léo Wolfenstein)"><img src="assets/stills/far-cry-5-shadow/02.jpg" srcset="assets/stills/far-cry-5-shadow/02-480.jpg 480w, assets/stills/far-cry-5-shadow/02-960.jpg 960w, assets/stills/far-cry-5-shadow/02-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="642" height="248" loading="lazy" alt="Photogramme 2 de Far Cry 5 — Shadow (publicité, réalisé par Léo Wolfenstein)"></button>
+          <button type="button" data-project="8" data-index="2" aria-label="Agrandir : Photogramme 3 de Far Cry 5 — Shadow (publicité, réalisé par Léo Wolfenstein)"><img src="assets/stills/far-cry-5-shadow/03.jpg" srcset="assets/stills/far-cry-5-shadow/03-480.jpg 480w, assets/stills/far-cry-5-shadow/03-960.jpg 960w, assets/stills/far-cry-5-shadow/03-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="642" height="240" loading="lazy" alt="Photogramme 3 de Far Cry 5 — Shadow (publicité, réalisé par Léo Wolfenstein)"></button>
+          <button type="button" data-project="8" data-index="3" aria-label="Agrandir : Photogramme 4 de Far Cry 5 — Shadow (publicité, réalisé par Léo Wolfenstein)"><img src="assets/stills/far-cry-5-shadow/04.jpg" srcset="assets/stills/far-cry-5-shadow/04-480.jpg 480w, assets/stills/far-cry-5-shadow/04-960.jpg 960w, assets/stills/far-cry-5-shadow/04-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="640" height="240" loading="lazy" alt="Photogramme 4 de Far Cry 5 — Shadow (publicité, réalisé par Léo Wolfenstein)"></button>
+          <button type="button" data-project="8" data-index="4" aria-label="Agrandir : Photogramme 5 de Far Cry 5 — Shadow (publicité, réalisé par Léo Wolfenstein)"><img src="assets/stills/far-cry-5-shadow/05.jpg" srcset="assets/stills/far-cry-5-shadow/05-480.jpg 480w, assets/stills/far-cry-5-shadow/05-960.jpg 960w, assets/stills/far-cry-5-shadow/05-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="642" height="240" loading="lazy" alt="Photogramme 5 de Far Cry 5 — Shadow (publicité, réalisé par Léo Wolfenstein)"></button>
+          <button type="button" data-project="8" data-index="5" aria-label="Agrandir : Photogramme 6 de Far Cry 5 — Shadow (publicité, réalisé par Léo Wolfenstein)"><img src="assets/stills/far-cry-5-shadow/06.jpg" srcset="assets/stills/far-cry-5-shadow/06-480.jpg 480w, assets/stills/far-cry-5-shadow/06-960.jpg 960w, assets/stills/far-cry-5-shadow/06-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="642" height="240" loading="lazy" alt="Photogramme 6 de Far Cry 5 — Shadow (publicité, réalisé par Léo Wolfenstein)"></button>
+          </div>
+          <button type="button" class="stills-arrow stills-next" data-shift="1" data-shift-project="8" aria-label="Photos suivantes de Far Cry 5 — Shadow">›</button>
+        </div>
+      </div>
+    </article>
+    <article class="project-row">
+      <div class="project-block">
+        <div class="project-meta">
+          <h3 class="display"><a class="project-link" href="projets/call-me-nina/">Call Me Nina</a></h3>
+          <p class="type">publicité — fashion week</p>
+          <p class="credit">réalisé par Gabriel Maz</p>
+          <p class="credit prod">Film promotionnel pour la nouvelle collection du créateur Victor Weinsanto</p>
+        </div>
+        <div class="stills-wrap">
+          <button type="button" class="stills-arrow stills-prev" data-shift="-1" data-shift-project="9" aria-label="Photos précédentes de Call Me Nina">‹</button>
+          <div class="stills" data-project-stills="9">
+          <button type="button" data-project="9" data-index="0" aria-label="Agrandir : Photogramme 1 de Call Me Nina (publicité — fashion week, réalisé par Gabriel Maz)"><img src="assets/stills/call-me-nina/01.jpg" srcset="assets/stills/call-me-nina/01-480.jpg 480w, assets/stills/call-me-nina/01-960.jpg 960w, assets/stills/call-me-nina/01-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="646" height="268" loading="lazy" alt="Photogramme 1 de Call Me Nina (publicité — fashion week, réalisé par Gabriel Maz)"></button>
+          <button type="button" data-project="9" data-index="1" aria-label="Agrandir : Photogramme 2 de Call Me Nina (publicité — fashion week, réalisé par Gabriel Maz)"><img src="assets/stills/call-me-nina/02.jpg" srcset="assets/stills/call-me-nina/02-480.jpg 480w, assets/stills/call-me-nina/02-960.jpg 960w, assets/stills/call-me-nina/02-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="644" height="268" loading="lazy" alt="Photogramme 2 de Call Me Nina (publicité — fashion week, réalisé par Gabriel Maz)"></button>
+          <button type="button" data-project="9" data-index="2" aria-label="Agrandir : Photogramme 3 de Call Me Nina (publicité — fashion week, réalisé par Gabriel Maz)"><img src="assets/stills/call-me-nina/03.jpg" srcset="assets/stills/call-me-nina/03-480.jpg 480w, assets/stills/call-me-nina/03-960.jpg 960w, assets/stills/call-me-nina/03-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="644" height="268" loading="lazy" alt="Photogramme 3 de Call Me Nina (publicité — fashion week, réalisé par Gabriel Maz)"></button>
+          <button type="button" data-project="9" data-index="3" aria-label="Agrandir : Photogramme 4 de Call Me Nina (publicité — fashion week, réalisé par Gabriel Maz)"><img src="assets/stills/call-me-nina/04.jpg" srcset="assets/stills/call-me-nina/04-480.jpg 480w, assets/stills/call-me-nina/04-960.jpg 960w, assets/stills/call-me-nina/04-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="644" height="268" loading="lazy" alt="Photogramme 4 de Call Me Nina (publicité — fashion week, réalisé par Gabriel Maz)"></button>
+          <button type="button" data-project="9" data-index="4" aria-label="Agrandir : Photogramme 5 de Call Me Nina (publicité — fashion week, réalisé par Gabriel Maz)"><img src="assets/stills/call-me-nina/05.jpg" srcset="assets/stills/call-me-nina/05-480.jpg 480w, assets/stills/call-me-nina/05-960.jpg 960w, assets/stills/call-me-nina/05-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="644" height="268" loading="lazy" alt="Photogramme 5 de Call Me Nina (publicité — fashion week, réalisé par Gabriel Maz)"></button>
+          <button type="button" data-project="9" data-index="5" aria-label="Agrandir : Photogramme 6 de Call Me Nina (publicité — fashion week, réalisé par Gabriel Maz)"><img src="assets/stills/call-me-nina/06.jpg" srcset="assets/stills/call-me-nina/06-480.jpg 480w, assets/stills/call-me-nina/06-960.jpg 960w, assets/stills/call-me-nina/06-1600.jpg 1600w" sizes="(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw" width="644" height="268" loading="lazy" alt="Photogramme 6 de Call Me Nina (publicité — fashion week, réalisé par Gabriel Maz)"></button>
+          </div>
+          <button type="button" class="stills-arrow stills-next" data-shift="1" data-shift-project="9" aria-label="Photos suivantes de Call Me Nina">›</button>
+        </div>
+      </div>
+    </article>
+<!-- PROJETS:FIN -->
+  </div>
 </main>
 
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo agrandie">
-  <button class="lb-close" id="lbClose" aria-label="Fermer">✕</button>
-  <button class="lb-prev" id="lbPrev" aria-label="Précédent">←</button>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image agrandie">
+  <button type="button" class="lb-close" id="lbClose" aria-label="Fermer">✕</button>
+  <button type="button" class="lb-prev" id="lbPrev" aria-label="Image précédente">←</button>
   <img id="lbImg" alt="" hidden>
-  <button class="lb-next" id="lbNext" aria-label="Suivant">→</button>
-  <p class="lb-caption" id="lbCaption"></p>
+  <button type="button" class="lb-next" id="lbNext" aria-label="Image suivante">→</button>
+  <p class="lb-caption" id="lbCaption" aria-live="polite"></p>
 </div>
 
 <div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Bande démo">
-  <button class="modal-close" id="videoModalClose" aria-label="Fermer">✕</button>
+  <button type="button" class="modal-close" id="videoModalClose" aria-label="Fermer la bande démo">✕</button>
   <div class="video-embed" id="videoEmbed"></div>
 </div>
 
-<div class="text-modal" id="filmoModal" role="dialog" aria-modal="true" aria-label="Filmographie">
-  <button class="modal-close" id="filmoClose" aria-label="Fermer">✕</button>
+<!-- Filmographie : écrite directement dans la page pour que Google la lise.
+     Pour la modifier, éditez simplement cette liste. -->
+<div class="text-modal" id="filmoModal" role="dialog" aria-modal="true" aria-labelledby="filmoTitle" data-hash="filmographie">
+  <button type="button" class="modal-close" id="filmoClose" aria-label="Fermer la filmographie">✕</button>
   <div class="text-modal-inner">
-    <h2 class="display">Filmographie</h2>
-    <div class="modal-body" id="filmoBody"></div>
+    <h2 class="display" id="filmoTitle" tabindex="-1">Filmographie</h2>
+    <div class="modal-body" id="filmoBody">
+
+      <h3>Réalisation</h3>
+      <ul>
+        <li><strong>GISELLE(S)</strong> | Marie-Claude Pietragalla &amp; Julien Derouault | MARTHA PRODUCTIONS
+          <span>Captation live multicaméra du ballet (en post-production) — Diffusion Olympia TV (Canal+)</span>
+        </li>
+      </ul>
+
+      <h3>Longs-métrages (dir. photo)</h3>
+      <ul>
+        <li><strong>SUR LE SENTIER</strong> | Gérard Jumel | JOUR J PRODUCTIONS
+          <span>Sorti en salles le 8 avril 2026 — Alexa XT + Zeiss 35 mm GO T1.3</span>
+        </li>
+        <li><strong>IL ÉTAIT UNE FOIS MICHEL LEGRAND</strong> | David Hertzog Dessites | MACT PRODUCTIONS
+          <span>Dir. photo 2e équipe — Sélection officielle Festival de Cannes, Cannes Classics 2024 — Sorti en salles le 4 décembre 2024</span>
+        </li>
+        <li><strong>DES VACANCES À TOUT PRIX</strong> | Stevan Lee Mraovitch | CHARLOTTE RUSSE FILMS
+          <span>Sony F65 + Panavision Primo-S — Festivals internationaux, sortie aux États-Unis</span>
+        </li>
+        <li><strong>FARIO</strong> | Gérard Jumel | JOUR J PRODUCTIONS
+          <span>Alexa Plus + Cooke Panchro — Sortie en salles art et essai</span>
+        </li>
+      </ul>
+
+      <h3>Courts-métrages (dir. photo)</h3>
+      <ul>
+        <li><strong>OSEF LE PARADIS</strong> | Quentin Dufournet-Charles | PIMENTO FILMS x CNC x ARTE
+          <span>Alexa Mini LF + Technovision Classic 1,5x anamorphique — Diffusion Arte</span>
+        </li>
+        <li><strong>L'ODEUR DE L'ÉTÉ</strong> | Bastien Louessard | ASMAR PRODUCTIONS x OMEN FILMS
+          <span>Alexa Mini + Cooke S4 Mini — En post-production</span>
+        </li>
+        <li><strong>TERMINUS</strong> | Alexis Thorez | OMEN FILMS
+          <span>En post-production</span>
+        </li>
+        <li><strong>ROSE D'HIVER</strong> | Alexis Rousseau | OMEN FILMS
+          <span>Alexa Mini + Cooke Anamorphic S6</span>
+        </li>
+        <li><strong>MOI ET (EST) L'AUTRE</strong> | Région Île-de-France x ARS x Culture &amp; Santé x POC Alfortville
+          <span>Projet artistique de danse avec les usagers des hôpitaux de Saint-Maurice et les élèves du Théâtre du Corps Pietragalla-Derouault, chorégraphié par Nam Kyung Kim</span>
+        </li>
+        <li><strong>LA ZINGARA ET LES JEUNES GENS</strong> | Julie Ducrocq | CINÉSPIC PRODUCTIONS
+          <span>Alexa XT Plus + Kowa Anamorphic</span>
+        </li>
+        <li><strong>LA MORT ET LES MUSICIENS</strong> | Julie Ducrocq | CINÉSPIC PRODUCTIONS
+          <span>Alexa Plus + Cooke S4 Mini</span>
+        </li>
+        <li><strong>N O X</strong> | Louisa Pili | SUZANNE x PANORAMA PRODUCTIONS
+          <span>Alexa Mini + Cooke S4</span>
+        </li>
+        <li><strong>PROCESSUS</strong> | Fany Gardes
+          <span>Sony F55 + Panavision Primo-S</span>
+        </li>
+        <li><strong>CRU, SALÉ, FICELÉ</strong> | Emma Outrebon | 400 TITRES
+          <span>Alexa Mini + Kinoptik</span>
+        </li>
+        <li><strong>VTC</strong> (websérie 2x6) | Louis Klein &amp; Alexis Thorez | 161 PRODUCTIONS
+          <span>Alexa Mini + Cooke S4 Mini</span>
+        </li>
+        <li><strong>JE T'AIME</strong> | Dorine Pujol &amp; Gabriel Maz
+          <span>Red Epic Dragon + Zeiss CP.2</span>
+        </li>
+      </ul>
+
+      <h3>Documentaires (dir. photo)</h3>
+      <ul>
+        <li><strong>SUPER-VILAINS : L'ENQUÊTE</strong> | Xavier Fournier &amp; Fred Ralière | COMMUN-ID
+          <span>Turner Broadcasting &amp; Warner Bros. Discovery</span>
+        </li>
+      </ul>
+
+      <h3>Publicités &amp; films promotionnels (dir. photo)</h3>
+      <ul>
+        <li><strong>GIVENCHY</strong> | 1001 FILMS PRODUCTIONS</li>
+        <li><strong>SELENA GOMEZ x RARE BEAUTY</strong> | Sephora | 1001 FILMS PRODUCTIONS
+          <span>Avec Corentin Huard, Alexinho Mougeolle &amp; Rey Nguyen</span>
+        </li>
+        <li><strong>BVLGARI</strong> | Corentin Huard | 1001 FILMS PRODUCTIONS</li>
+        <li><strong>PIETRAGALLA DANSE BARBARA</strong> | Le Théâtre du Corps Pietragalla-Derouault
+          <span>Teaser promotionnel</span>
+        </li>
+        <li><strong>CALL ME NINA</strong> (fashion week) | Gabriel Maz | VICTOR WEINSANTO
+          <span>Blackmagic Pocket 6K + Atlas Orion Anamorphic</span>
+        </li>
+        <li><strong>BOLLINGER</strong> (shooting) | AGENCE MARIANNE
+          <span>Sony A7S II + Sigma Art</span>
+        </li>
+        <li><strong>FAR CRY 5 — SHADOW</strong> | Léo Wolfenstein | CLÉO PRODUCTIONS
+          <span>Alexa Mini + Cooke Anamorphic</span>
+        </li>
+        <li><strong>SAUVEZ UN GAMER — SHADOW</strong> | Léo Wolfenstein | CLÉO PRODUCTIONS
+          <span>Alexa Mini + Kinoptik</span>
+        </li>
+        <li><strong>HIVE — SHADOW</strong> | Léo Wolfenstein | CLÉO PRODUCTIONS
+          <span>Alexa Mini + Cooke S4</span>
+        </li>
+        <li><strong>SHADOWEEN — SHADOW</strong> | Léo Wolfenstein | CLÉO PRODUCTIONS
+          <span>Alexa Mini + Canon CN-E 18-80 mm</span>
+        </li>
+        <li><strong>NO RULES — SHADOW</strong> | Léo Wolfenstein | CLÉO PRODUCTIONS
+          <span>Alexa Mini + Leica Summilux-C</span>
+        </li>
+        <li><strong>SHADOW — IN THE CLOUD</strong> | Léo Wolfenstein | CLÉO PRODUCTIONS
+          <span>Red Epic Dragon + Cooke S4 Mini</span>
+        </li>
+      </ul>
+
+    </div>
   </div>
 </div>
 
-<div class="text-modal" id="picsModal" role="dialog" aria-modal="true" aria-label="Photos">
-  <button class="modal-close" id="picsClose" aria-label="Fermer">✕</button>
+<div class="text-modal" id="picsModal" role="dialog" aria-modal="true" aria-labelledby="picsTitle" data-hash="photos">
+  <button type="button" class="modal-close" id="picsClose" aria-label="Fermer les photos">✕</button>
   <div class="text-modal-inner">
-    <h2 class="display">Photos</h2>
+    <h2 class="display" id="picsTitle" tabindex="-1">Photos</h2>
     <div class="pics-grid" id="picsGrid"></div>
   </div>
 </div>
 
-<div class="text-modal" id="bioModal" role="dialog" aria-modal="true" aria-label="Bio">
-  <button class="modal-close" id="bioClose" aria-label="Fermer">✕</button>
+<!-- Bio : écrite directement dans la page pour que Google la lise. -->
+<div class="text-modal" id="bioModal" role="dialog" aria-modal="true" aria-labelledby="bioTitle" data-hash="bio">
+  <button type="button" class="modal-close" id="bioClose" aria-label="Fermer la bio">✕</button>
   <div class="text-modal-inner">
-    <h2 class="display">Bio</h2>
-    <div class="modal-body" id="bioBody"></div>
+    <h2 class="display" id="bioTitle" tabindex="-1">Bio</h2>
+    <div class="modal-body" id="bioBody">
+      <p class="bio-lang-note"><a href="#bioEnglish" hreflang="en" lang="en">English version below ↓</a></p>
+
+      <p class="bio-lead">Directeur de la photographie basé à Paris, je signe l'image de longs-métrages, de courts-métrages, de films de danse et de publicités : <em>Fario</em> et <em>Sur le Sentier</em> de Gérard Jumel, <em>OSEF Le Paradis</em> pour Arte, la seconde équipe d'<em>Il était une fois Michel Legrand</em> (Cannes Classics 2024), des films pour Givenchy, Bvlgari ou Rare Beauty. Aux côtés de Marie-Claude Pietragalla et Julien Derouault, j'ai réalisé la captation du ballet <em>Giselle(s)</em> pour Olympia TV (Canal+).</p>
+
+      <p>Originaire de Cornas, en Ardèche, j'ai très tôt eu besoin de m'exprimer artistiquement, du théâtre au conservatoire, où j'ai étudié le saxophone et le piano. À 14 ans, je me suis tourné vers le cinéma en fondant une « Junior Association » : une vraie école de la débrouille, qui me permettait de financer mes propres courts-métrages grâce à des captations d'événements dans la région.</p>
+      <p>Trois mois avant le bac, ma proviseure m'a conseillé de redoubler ou de quitter le lycée pour ne pas peser sur les statistiques de réussite. J'ai choisi de partir et de monter à Paris pour me consacrer au cinéma. Issu d'une famille étrangère au milieu artistique, j'arrivais sans réseau, mais avec la certitude que ma place était là. C'est durant ces années que le métier de directeur de la photographie s'est imposé à moi.</p>
+      <p>Mon expérience s'est forgée sur le tas : films étudiants et projets bénévoles, parfois en travaillant de nuit en mise en rayon pour tenir financièrement. Ces tournages m'ont ouvert les portes de mes premiers projets rémunérés (institutionnel, corporate, petites publicités), pendant que je continuais de signer l'image de fictions pour construire ma première bande démo.</p>
+      <p>En 2019, j'ai éclairé mon premier long-métrage, <em>Fario</em>, réalisé par Gérard Jumel, que j'ai retrouvé en 2024 sur <em>Sur le Sentier</em>. Mon travail s'est depuis diversifié, de la comédie (<em>Des Vacances à Tout Prix</em>) au documentaire d'expédition dans la jungle camerounaise, en passant par la publicité.</p>
+      <p>En 2024, ma rencontre avec Marie-Claude Pietragalla et Julien Derouault a ouvert un nouveau chapitre : la captation de <em>Giselle(s)</em>, puis des masterclass au sein de leur compagnie, Le Théâtre du Corps, où j'explore le lien entre l'image et le mouvement.</p>
+      <p>Animé par le défi technique et l'alchimie humaine, je vois ce métier comme un apprentissage permanent. Je défends un cinéma indépendant et inventif, et je crois que se mettre corps et âme au service d'un projet reste la meilleure façon de le faire exister.</p>
+
+      <div lang="en">
+        <hr class="bio-divider" id="bioEnglish">
+        <h3>English</h3>
+        <p class="bio-lead">Paris-based director of photography, I shoot feature films, shorts, dance films and commercials: <em>Fario</em> and <em>Sur le Sentier</em> by Gérard Jumel, <em>OSEF Le Paradis</em> for Arte, second unit on <em>Il était une fois Michel Legrand</em> (Cannes Classics 2024), and films for Givenchy, Bvlgari and Rare Beauty. Alongside Marie-Claude Pietragalla and Julien Derouault, I directed the live multi-camera recording of the ballet <em>Giselle(s)</em> for Olympia TV (Canal+).</p>
+        <p>Born in Cornas, in the Ardèche region, I felt the pull toward artistic expression early on, moving from theatre to the music conservatory, where I studied saxophone and piano. At 14, I turned to filmmaking and founded a "Junior Association": a real school of resourcefulness that let me fund my own short films by shooting local events.</p>
+        <p>Three months before my final exams, my headmistress advised me to repeat the year or leave school so as not to hurt its pass rate. I chose to leave and moved to Paris to devote myself to filmmaking. Coming from a family with no ties to the arts, I arrived with no network, but certain this was where I belonged. Those years made cinematography my path.</p>
+        <p>My experience was forged on set: student films and volunteer projects, sometimes working night shifts stocking shelves to make ends meet. These shoots led to my first paid jobs (corporate films, small commercials), while I kept shooting fiction projects to build my first showreel.</p>
+        <p>In 2019, I shot my first feature, <em>Fario</em>, directed by Gérard Jumel, with whom I worked again in 2024 on <em>Sur le Sentier</em>. My work has since branched out, from comedy (<em>Des Vacances à Tout Prix</em>) to an expedition documentary in the Cameroonian jungle, as well as commercials.</p>
+        <p>In 2024, meeting Marie-Claude Pietragalla and Julien Derouault opened a new chapter: the recording of <em>Giselle(s)</em>, then masterclasses within their company, Le Théâtre du Corps, exploring the relationship between image and movement.</p>
+        <p>Driven by technical challenges and human chemistry, I see my craft as constant learning. I champion independent, inventive cinema, and I believe that giving yourself body and soul to a project is still the best way to bring it to life.</p>
+      </div>
+
+      <div class="bio-photo-wrap">
+        <img class="bio-photo" src="assets/bio/portrait.jpg" alt="Portrait de Paul Olinger Ost" loading="lazy">
+      </div>
+    </div>
   </div>
 </div>
 
 <footer id="contact">
   <div class="col">
-    <h3 class="display">Contact</h3>
+    <h2 class="footer-title">Contact</h2>
     <p><a href="mailto:contact@paulolingerost.com">contact@paulolingerost.com</a></p>
-    <p><a href="tel:+33659862680">06 59 86 26 80</a></p>
+    <p><a href="tel:+33659862680">+33 6 59 86 26 80</a></p>
     <p>Paris, France</p>
   </div>
   <div class="col">
-    <h3 class="display">Suivre</h3>
-    <p><a href="https://www.instagram.com/paulolingerost/" target="_blank" rel="noopener">Instagram</a></p>
-    <p><a href="https://www.imdb.com/name/nm7436555/" target="_blank" rel="noopener">IMDb</a></p>
+    <h2 class="footer-title">Suivre</h2>
+    <p><a href="https://www.instagram.com/paulolingerost/" target="_blank" rel="noopener me">Instagram<span class="visually-hidden"> (nouvel onglet)</span></a></p>
+    <p><a href="https://www.imdb.com/name/nm7436555/" target="_blank" rel="noopener me">IMDb<span class="visually-hidden"> (nouvel onglet)</span></a></p>
   </div>
   <div class="col">
     <p>© Paul Olinger Ost</p>

@@ -23,8 +23,10 @@ Photos plusieurs tailles (optionnel, mais fortement conseillé) :
     Sans Pillow ni variantes, le script fonctionne quand même normalement.
 
 - Ce script scanne tous les dossiers, lit chaque info.json, liste les photos
-  présentes, et écrit le résultat dans assets/projects.json — le fichier que
-  le site charge réellement au chargement de la page.
+  présentes, et écrit le résultat dans assets/projects.json.
+- Il écrit aussi la liste des projets directement dans index.html (pour que
+  Google et les aperçus de liens la voient sans JavaScript), génère une page
+  par projet dans projets/<slug>/index.html et met à jour sitemap.xml.
 
 Utilisation :
     python3 build-projects.py
@@ -125,6 +127,13 @@ def main():
 
         stills = [build_still_entry(folder, f) for f in still_files]
 
+        # Textes alternatifs facultatifs, par photo :
+        #   "alts": {"01.jpg": "Deux adolescents assis dans un champ au crépuscule"}
+        custom_alts = info.get("alts", {}) or {}
+        for s in stills:
+            if custom_alts.get(s["file"]):
+                s["alt"] = custom_alts[s["file"]]
+
         projects.append({
             "slug": slug,
             "order": info.get("order", 999),
@@ -134,6 +143,10 @@ def main():
             "credit": info.get("credit", ""),
             "prod": info.get("prod", ""),
             "diffusion": info.get("diffusion", ""),
+            # Champs facultatifs, affichés sur la page du projet :
+            "camera": info.get("camera", ""),      # ex. "Alexa Mini + Cooke S4 Mini"
+            "synopsis": info.get("synopsis", ""),  # 1 à 3 phrases
+            "video": info.get("video", ""),        # lien Vimeo ou YouTube (bande-annonce)
             "stills": stills,
         })
 
@@ -148,6 +161,11 @@ def main():
         with_srcset = sum(1 for s in p["stills"] if "srcset" in s)
         note = f", {with_srcset} avec srcset" if with_srcset else ""
         print(f"   - {p['title']}  ({len(p['stills'])} photos{note})")
+
+    # Écrit les projets directement dans index.html, génère une page par
+    # projet (projets/<slug>/) et le sitemap — voir build_site.py.
+    import build_site
+    build_site.render(ROOT, projects)
 
     if warnings:
         print("\n⚠️  Avertissements :")
