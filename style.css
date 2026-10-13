@@ -454,15 +454,14 @@ main:focus{outline:none;}
 .bio-photo-wrap{
   margin-top:50px;
   display:flex;
-  justify-content:flex-start;
+  justify-content:center;
 }
+/* Photo entière, sans recadrage */
 .bio-photo{
-  width:280px;
-  aspect-ratio:4/5;
-  object-fit:cover;
-}
-@media (max-width:640px){
-  .bio-photo{width:220px;}
+  width:auto;
+  height:auto;
+  max-width:min(100%, 420px);
+  max-height:70vh;
 }
 
 /* ---------- pics page ---------- */
