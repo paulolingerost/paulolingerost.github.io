@@ -135,6 +135,14 @@ main:focus{outline:none;}
 .hero-play:focus-visible .hero-play-label{
   border-bottom-color:var(--ink);
 }
+/* Emplacement pour deux démos (Fiction / Publicité) : voir index.html */
+.hero-reels{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex; gap:28px;
+}
+.hero-reels .hero-play{position:static; transform:none;}
 /* Pause / lecture de la vidéo d'arrière-plan (WCAG 2.2.2) */
 .hero-pause{
   margin-left:auto;
@@ -203,7 +211,8 @@ main:focus{outline:none;}
     align-items:flex-start;
     gap:20px;
   }
-  .hero-play{
+  .hero-play,
+  .hero-reels{
     position:static;
     transform:none;
     align-self:center;
@@ -419,6 +428,10 @@ main:focus{outline:none;}
 .text-modal-inner .modal-body li strong{color:var(--ink); font-weight:500;}
 .text-modal-inner .modal-body li span{
   display:block; font-size:0.78rem; color:var(--ink-faint); margin-top:3px;
+}
+/* Distinction mise en avant dans la filmographie (sélection, prix…) */
+.text-modal-inner .modal-body li span.distinction{
+  color:var(--ink); font-size:0.8rem; letter-spacing:0.02em;
 }
 .text-modal-inner .modal-body p,
 .text-modal-inner .modal-body h3,

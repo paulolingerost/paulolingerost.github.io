@@ -4,5 +4,6 @@
   "type": "publicité",
   "credit": "réalisé par Léo Wolfenstein",
   "prod": "Produit par Cléo Productions",
-  "camera": "Alexa Mini + Cooke Anamorphic"
+  "camera": "Alexa Mini + Cooke Anamorphic",
+  "featured": false
 }

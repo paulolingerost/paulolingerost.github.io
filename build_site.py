@@ -95,7 +95,10 @@ def inject_index(root, projects):
     if START not in src or END not in src:
         print("⚠️  Repères PROJETS:DEBUT / PROJETS:FIN introuvables dans index.html : liste non écrite.")
         return
-    block = "\n".join(project_row(p, i) for i, p in enumerate(projects))
+    # i = position dans projects.json (sert à la lightbox) : on la garde
+    # même quand des projets hors vitrine sont sautés.
+    block = "\n".join(project_row(p, i) for i, p in enumerate(projects)
+                      if p.get("featured", True))
     pattern = re.compile(re.escape(START) + r".*?" + re.escape(END), re.S)
     src = pattern.sub(lambda m: f"{START}\n{block}\n{END}", src)
     with open(path, "w", encoding="utf-8") as f:

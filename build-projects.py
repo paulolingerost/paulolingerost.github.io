@@ -6,6 +6,8 @@ Comment ça marche :
 - Chaque projet = un dossier dans assets/stills/<slug-du-projet>/
 - Ce dossier doit contenir :
     - un fichier info.json (titre, type, rôle, crédit, prod, diffusion, ordre)
+      -> "featured": false (optionnel) retire le projet de la vitrine
+         « Projets récents » de l'accueil, sans supprimer sa page ni ses photos.
       -> "role" est optionnel : c'est votre poste sur CE projet précis
          (ex: "Directeur de la photographie", "Réalisateur & DP"...).
          Laissez-le vide ou absent si vous ne voulez rien préciser.
@@ -147,6 +149,9 @@ def main():
             "camera": info.get("camera", ""),      # ex. "Alexa Mini + Cooke S4 Mini"
             "synopsis": info.get("synopsis", ""),  # 1 à 3 phrases
             "video": info.get("video", ""),        # lien Vimeo ou YouTube (bande-annonce)
+            # "featured": false -> le projet n'apparaît pas dans la vitrine
+            # de l'accueil, mais garde sa page projet et ses photos.
+            "featured": info.get("featured", True),
             "stills": stills,
         })
 

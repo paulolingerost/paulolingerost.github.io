@@ -119,24 +119,29 @@ if(heroPause){
 }
 
 /* ---------- bande démo (Vimeo, pour garder la pleine qualité) ---------- */
-const VIMEO_ID = '1224259824';
+// Chaque bouton .hero-play porte son propre identifiant Vimeo (data-vimeo)
+// et son titre (data-reel-title). Une seule démo pour l'instant ; pour passer
+// à deux démos (Fiction / Publicité), voir le bloc commenté dans index.html.
+const VIMEO_ID = '1224259824'; // démo actuelle, utilisée si data-vimeo est absent
 
 (function initReelModal(){
-  const heroPlay = document.getElementById('heroPlay');
+  const reelButtons = document.querySelectorAll('.hero-play');
   const videoModal = document.getElementById('videoModal');
   const videoEmbed = document.getElementById('videoEmbed');
   const closeBtn = document.getElementById('videoModalClose');
-  if(!heroPlay || !videoModal) return;
+  if(!reelButtons.length || !videoModal) return;
 
-  heroPlay.addEventListener('click', () => {
+  reelButtons.forEach(btn => btn.addEventListener('click', () => {
+    const id = btn.dataset.vimeo || VIMEO_ID;
+    const title = btn.dataset.reelTitle || 'Bande démo de Paul Olinger Ost';
     videoEmbed.innerHTML = `
-      <iframe src="https://player.vimeo.com/video/${VIMEO_ID}?autoplay=1&title=0&byline=0&portrait=0&dnt=1"
-              title="Bande démo de Paul Olinger Ost"
+      <iframe src="https://player.vimeo.com/video/${id}?autoplay=1&title=0&byline=0&portrait=0&dnt=1"
+              title="${title}"
               allow="autoplay; fullscreen; picture-in-picture"
               allowfullscreen></iframe>`;
     heroVideo && heroVideo.pause();
-    openModal(videoModal, {trigger: heroPlay, focus: closeBtn});
-  });
+    openModal(videoModal, {trigger: btn, focus: closeBtn});
+  }));
   videoModal.addEventListener('modal:close', () => {
     videoEmbed.innerHTML = ''; // retire l'iframe : coupe net la lecture
     if(heroVideo && !heroUserPaused) heroVideo.play().catch(() => {});
@@ -186,6 +191,7 @@ async function loadProjects(){
 // Secours uniquement : même rendu que build_site.py
 function renderProjects(){
   projectList.innerHTML = projects.map((p, i) => {
+    if(p.featured === false) return ''; // hors vitrine (garde sa page projet)
     const arrows = p.stills.length >= 3;
     return `
     <article class="project-row">
