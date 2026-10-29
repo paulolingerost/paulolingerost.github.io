@@ -548,5 +548,213 @@
         "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w"
       }
     ]
+  },
+  {
+    "slug": "clip-adele-et-robin-courage",
+    "order": 11,
+    "title": "Adèle & Robin — Courage",
+    "type": "clip",
+    "role": "",
+    "credit": "réalisé par Naumaur",
+    "prod": "Produit par Duchess x 11.65 Lab",
+    "diffusion": "Clip officiel, 2025",
+    "camera": "",
+    "synopsis": "",
+    "video": "https://www.youtube.com/watch?v=XsFiSk8Dwps",
+    "featured": false,
+    "stills": [
+      {
+        "file": "01.jpg",
+        "width": 1920,
+        "height": 816,
+        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
+      },
+      {
+        "file": "02.jpg",
+        "width": 1920,
+        "height": 816,
+        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
+      },
+      {
+        "file": "03.jpg",
+        "width": 1920,
+        "height": 816,
+        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
+      },
+      {
+        "file": "04.jpg",
+        "width": 1920,
+        "height": 816,
+        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w"
+      },
+      {
+        "file": "05.jpg",
+        "width": 1920,
+        "height": 816,
+        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w"
+      },
+      {
+        "file": "06.jpg",
+        "width": 1920,
+        "height": 816,
+        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w"
+      }
+    ]
+  },
+  {
+    "slug": "clip-heroe-dans-dix-ans",
+    "order": 12,
+    "title": "Heroe — Dans dix ans",
+    "type": "clip",
+    "role": "",
+    "credit": "réalisé par Naumaur",
+    "prod": "Produit par Duchess Production x 11.65 Lab",
+    "diffusion": "Clip officiel, 2026",
+    "camera": "",
+    "synopsis": "",
+    "video": "https://www.youtube.com/watch?v=a7_6oi0zh34",
+    "featured": false,
+    "stills": [
+      {
+        "file": "01.jpg",
+        "width": 1920,
+        "height": 818,
+        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
+      },
+      {
+        "file": "02.jpg",
+        "width": 1920,
+        "height": 818,
+        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
+      },
+      {
+        "file": "03.jpg",
+        "width": 1920,
+        "height": 818,
+        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
+      },
+      {
+        "file": "04.jpg",
+        "width": 1920,
+        "height": 818,
+        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w"
+      },
+      {
+        "file": "05.jpg",
+        "width": 1920,
+        "height": 818,
+        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w"
+      },
+      {
+        "file": "06.jpg",
+        "width": 1920,
+        "height": 818,
+        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w"
+      }
+    ]
+  },
+  {
+    "slug": "clip-madame-monsieur-zero",
+    "order": 13,
+    "title": "Madame Monsieur — Zéro",
+    "type": "clip",
+    "role": "",
+    "credit": "réalisé par Sam & Thibault (Jeunes Joueurs)",
+    "prod": "Produit par La Sucrerie — feat. Lord Esperanza (Low Wood)",
+    "diffusion": "Clip officiel, 2020",
+    "camera": "",
+    "synopsis": "",
+    "video": "https://www.youtube.com/watch?v=RugQRKKmBEs",
+    "featured": false,
+    "stills": [
+      {
+        "file": "01.jpg",
+        "width": 1920,
+        "height": 816,
+        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
+      },
+      {
+        "file": "02.jpg",
+        "width": 1920,
+        "height": 816,
+        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
+      },
+      {
+        "file": "03.jpg",
+        "width": 1920,
+        "height": 816,
+        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
+      },
+      {
+        "file": "04.jpg",
+        "width": 1920,
+        "height": 816,
+        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w"
+      },
+      {
+        "file": "05.jpg",
+        "width": 1920,
+        "height": 816,
+        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w"
+      },
+      {
+        "file": "06.jpg",
+        "width": 1920,
+        "height": 816,
+        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w"
+      }
+    ]
+  },
+  {
+    "slug": "clip-madame-monsieur-comment-ca-va",
+    "order": 14,
+    "title": "Madame Monsieur — Comment ça va",
+    "type": "clip",
+    "role": "",
+    "credit": "réalisé par Sam & Thibault (Jeunes Joueurs)",
+    "prod": "Produit par La Sucrerie — feat. Jok'air (Low Wood)",
+    "diffusion": "Clip officiel, 2020",
+    "camera": "",
+    "synopsis": "",
+    "video": "https://www.youtube.com/watch?v=ZMnLSOEwfBY",
+    "featured": false,
+    "stills": [
+      {
+        "file": "01.jpg",
+        "width": 1920,
+        "height": 816,
+        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
+      },
+      {
+        "file": "02.jpg",
+        "width": 1920,
+        "height": 816,
+        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
+      },
+      {
+        "file": "03.jpg",
+        "width": 1920,
+        "height": 816,
+        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
+      },
+      {
+        "file": "04.jpg",
+        "width": 1920,
+        "height": 816,
+        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w"
+      },
+      {
+        "file": "05.jpg",
+        "width": 1920,
+        "height": 816,
+        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w"
+      },
+      {
+        "file": "06.jpg",
+        "width": 1920,
+        "height": 816,
+        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w"
+      }
+    ]
   }
 ]
