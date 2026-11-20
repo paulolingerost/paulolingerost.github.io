@@ -180,7 +180,8 @@ def project_page(p, prev_p, next_p):
         fiche("Réalisation", re.sub(r"^(écrit et )?(réalisé|mis en scène) par ", "", p.get("credit", ""))),
         fiche("Production", re.sub(r"^Produit par ", "", p.get("prod", ""))),
         fiche("Caméra / optiques", p.get("camera", "")),
-        fiche("Diffusion", p.get("diffusion", "")),
+        (fiche("Musique", p["diffusion"][len("Musique : "):]) if p.get("diffusion", "").startswith("Musique : ")
+         else fiche("Diffusion", p.get("diffusion", ""))),
         fiche("Image", p.get("role") or "Directeur de la photographie — Paul Olinger Ost"),
     ])
     synopsis = f'<p class="project-synopsis">{esc(p["synopsis"])}</p>' if p.get("synopsis") else ""
