@@ -1,5 +1,93 @@
 [
   {
+    "slug": "clip-soul",
+    "order": 0,
+    "title": "SOUL",
+    "type": "clip de danse",
+    "role": "",
+    "credit": "réalisé par Prince Mihai",
+    "prod": "Produit par OMEN Films — William Girard",
+    "diffusion": "",
+    "camera": "",
+    "synopsis": "",
+    "video": "",
+    "featured": true,
+    "stills": [
+      {
+        "file": "01.jpg",
+        "width": 1920,
+        "height": 1080,
+        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
+      },
+      {
+        "file": "02.jpg",
+        "width": 1920,
+        "height": 1080,
+        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
+      },
+      {
+        "file": "03.jpg",
+        "width": 1920,
+        "height": 1080,
+        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
+      },
+      {
+        "file": "04.jpg",
+        "width": 1920,
+        "height": 1080,
+        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w"
+      },
+      {
+        "file": "05.jpg",
+        "width": 1920,
+        "height": 1080,
+        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w"
+      },
+      {
+        "file": "06.jpg",
+        "width": 1920,
+        "height": 1080,
+        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w"
+      },
+      {
+        "file": "07.jpg",
+        "width": 1920,
+        "height": 1080,
+        "srcset": "07-480.jpg 480w, 07-960.jpg 960w, 07-1600.jpg 1600w"
+      },
+      {
+        "file": "08.jpg",
+        "width": 1920,
+        "height": 1080,
+        "srcset": "08-480.jpg 480w, 08-960.jpg 960w, 08-1600.jpg 1600w"
+      },
+      {
+        "file": "09.jpg",
+        "width": 1920,
+        "height": 1080,
+        "srcset": "09-480.jpg 480w, 09-960.jpg 960w, 09-1600.jpg 1600w"
+      },
+      {
+        "file": "10.jpg",
+        "width": 1920,
+        "height": 1080,
+        "srcset": "10-480.jpg 480w, 10-960.jpg 960w, 10-1600.jpg 1600w"
+      },
+      {
+        "file": "11.jpg",
+        "width": 1920,
+        "height": 1080,
+        "srcset": "11-480.jpg 480w, 11-960.jpg 960w, 11-1600.jpg 1600w"
+      },
+      {
+        "file": "12.jpg",
+        "width": 1920,
+        "height": 1080,
+        "srcset": "12-480.jpg 480w, 12-960.jpg 960w, 12-1600.jpg 1600w"
+      }
+    ]
+  },
+  {
     "slug": "sur-le-sentier",
     "order": 1,
     "title": "Sur le Sentier",
@@ -408,94 +496,6 @@
         "width": 648,
         "height": 272,
         "srcset": "11-480.jpg 480w, 11-960.jpg 960w, 11-1600.jpg 1600w"
-      }
-    ]
-  },
-  {
-    "slug": "clip-soul",
-    "order": 7.3,
-    "title": "SOUL",
-    "type": "clip de danse",
-    "role": "",
-    "credit": "réalisé par Prince Mihai",
-    "prod": "Produit par OMEN Films — William Girard",
-    "diffusion": "",
-    "camera": "",
-    "synopsis": "",
-    "video": "",
-    "featured": true,
-    "stills": [
-      {
-        "file": "01.jpg",
-        "width": 1920,
-        "height": 1080,
-        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
-      },
-      {
-        "file": "02.jpg",
-        "width": 1920,
-        "height": 1080,
-        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
-      },
-      {
-        "file": "03.jpg",
-        "width": 1920,
-        "height": 1080,
-        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
-      },
-      {
-        "file": "04.jpg",
-        "width": 1920,
-        "height": 1080,
-        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w"
-      },
-      {
-        "file": "05.jpg",
-        "width": 1920,
-        "height": 1080,
-        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w"
-      },
-      {
-        "file": "06.jpg",
-        "width": 1920,
-        "height": 1080,
-        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w"
-      },
-      {
-        "file": "07.jpg",
-        "width": 1920,
-        "height": 1080,
-        "srcset": "07-480.jpg 480w, 07-960.jpg 960w, 07-1600.jpg 1600w"
-      },
-      {
-        "file": "08.jpg",
-        "width": 1920,
-        "height": 1080,
-        "srcset": "08-480.jpg 480w, 08-960.jpg 960w, 08-1600.jpg 1600w"
-      },
-      {
-        "file": "09.jpg",
-        "width": 1920,
-        "height": 1080,
-        "srcset": "09-480.jpg 480w, 09-960.jpg 960w, 09-1600.jpg 1600w"
-      },
-      {
-        "file": "10.jpg",
-        "width": 1920,
-        "height": 1080,
-        "srcset": "10-480.jpg 480w, 10-960.jpg 960w, 10-1600.jpg 1600w"
-      },
-      {
-        "file": "11.jpg",
-        "width": 1920,
-        "height": 1080,
-        "srcset": "11-480.jpg 480w, 11-960.jpg 960w, 11-1600.jpg 1600w"
-      },
-      {
-        "file": "12.jpg",
-        "width": 1920,
-        "height": 1080,
-        "srcset": "12-480.jpg 480w, 12-960.jpg 960w, 12-1600.jpg 1600w"
       }
     ]
   },
