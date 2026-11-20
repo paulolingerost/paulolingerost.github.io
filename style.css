@@ -426,6 +426,19 @@ main:focus{outline:none;}
 .text-modal-inner .modal-body ul{list-style:none;}
 .text-modal-inner .modal-body li{margin-bottom:16px;}
 .text-modal-inner .modal-body li strong{color:var(--ink); font-weight:500;}
+/* Titres cliquables (page projet ou lien externe) : soulignés pour qu'on les repère */
+.text-modal-inner .modal-body li strong a{
+  text-decoration:underline;
+  text-decoration-color:var(--ink-faint);
+  text-decoration-thickness:1px;
+  text-underline-offset:3px;
+  transition:text-decoration-color .2s ease;
+}
+.text-modal-inner .modal-body li strong a:hover,
+.text-modal-inner .modal-body li strong a:focus-visible{text-decoration-color:var(--ink);}
+.text-modal-inner .modal-body li strong a[target="_blank"]::after{
+  content:"\2009\2197"; text-decoration:none; display:inline-block; color:var(--ink-faint);
+}
 .text-modal-inner .modal-body li span{
   display:block; font-size:0.78rem; color:var(--ink-faint); margin-top:3px;
 }
