@@ -169,7 +169,7 @@ def project_page(p, prev_p, next_p):
     for idx, s in enumerate(p["stills"]):
         lazy = "" if idx == 0 else 'loading="lazy" '
         still_tags.append(
-            f'      <figure class="project-still"><img {img_attrs(base, s, "(max-width: 820px) 100vw, 80vw")} '
+            f'      <figure class="project-still"><img {img_attrs(base, s, "(max-width: 640px) 100vw, 1100px" if idx == 0 else "(max-width: 640px) 100vw, 545px")} '
             f'{lazy}alt="{esc(still_alt(p, s, idx))}"></figure>')
     stills = "\n".join(still_tags)
 

@@ -610,13 +610,20 @@ footer .footer-title{
   background:#000;
 }
 .project-video iframe{width:100%; height:100%; border:0; display:block;}
+/* Planche : 1re image en grand, puis les suivantes deux par deux.
+   Si une image reste seule en fin de liste, elle reprend toute la largeur. */
 .project-stills{
-  max-width:1200px;
-  display:flex;
-  flex-direction:column;
-  gap:24px;
+  max-width:1100px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
 }
+.project-still{margin:0;}
+.project-still:first-child,
+.project-still:last-child:nth-child(even){grid-column:1 / -1;}
+.project-still:first-child{margin-bottom:6px;}
 .project-still img{
+  display:block;
   width:100%;
   height:auto;
 }
@@ -638,7 +645,8 @@ footer .footer-title{
 @media (max-width:640px){
   .project-main{padding:110px var(--gutter) 60px;}
   .project-fiche > div{grid-template-columns:1fr; gap:2px;}
-  .project-stills{gap:12px;}
+  .project-stills{grid-template-columns:1fr; gap:8px;}
+  .project-still:first-child{margin-bottom:0;}
   .site-header--solid nav{gap:16px;}
 }
 
