@@ -211,7 +211,7 @@ def project_page(p, prev_p, next_p):
 {json.dumps(ld, ensure_ascii=False, indent=2)}
 </script>
 <link rel="preconnect" href="https://api.fontshare.com">
-<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f%5B%5D=general-sans@400,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css?v={asset_version('style.css')}">
 </head>
 <body class="project-page">
