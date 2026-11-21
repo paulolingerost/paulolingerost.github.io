@@ -212,6 +212,12 @@ main:focus{outline:none;}
   font-weight:400;
 }
 
+/* Téléphone : l'image entière, sur toute la largeur, sans recadrage
+   (16:9 posé sur fond noir, le texte reste en bas). Même seuil que
+   script.js (48em), qui charge alors hero-720.mp4. */
+@media (max-width:48em){
+  .hero-video{object-fit:contain; object-position:center 42%;}
+}
 @media (max-width:640px){
   .hero{padding:0 var(--gutter) calc(60px + var(--safe-bottom));}
   .hero-bottom{
