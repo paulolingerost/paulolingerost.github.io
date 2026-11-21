@@ -61,6 +61,35 @@ def is_variant_file(stem):
     return bool(m and int(m.group(1)) in SIZE_VARIANTS)
 
 
+def ensure_variants(folder, filename):
+    """Crée les fichiers manquants à côté d'une photo (avec Pillow) :
+    - les tailles 480/960/1600 px plus petites que l'original, s'il en manque ;
+    - un jumeau WebP (même nom, .webp) de l'original et de chaque taille,
+      converti depuis le fichier de même taille : plus léger, servi en
+      priorité aux navigateurs récents. Ne touche jamais aux fichiers existants."""
+    if not HAS_PIL:
+        return
+    stem, ext = os.path.splitext(filename)
+    if ext.lower() == ".webp":
+        return
+    try:
+        with Image.open(os.path.join(folder, filename)) as img:
+            w, h = img.size
+            for tw in SIZE_VARIANTS:
+                variant = os.path.join(folder, f"{stem}-{tw}{ext}")
+                if tw < w and not os.path.isfile(variant):
+                    img.convert("RGB").resize((tw, round(h * tw / w)), Image.LANCZOS) \
+                        .save(variant, quality=82, optimize=True, progressive=True)
+        for name in [filename] + [f"{stem}-{tw}{ext}" for tw in SIZE_VARIANTS]:
+            src = os.path.join(folder, name)
+            out = os.path.join(folder, os.path.splitext(name)[0] + ".webp")
+            if os.path.isfile(src) and not os.path.isfile(out):
+                with Image.open(src) as im:
+                    im.convert("RGB").save(out, "WEBP", quality=80, method=6)
+    except Exception as e:
+        print(f"⚠️  {filename} : variantes non créées ({e})")
+
+
 def build_still_entry(folder, filename):
     stem, ext = os.path.splitext(filename)
     entry = {"file": filename}
@@ -79,6 +108,14 @@ def build_still_entry(folder, filename):
             variants.append(f"{candidate} {w}w")
     if variants:
         entry["srcset"] = ", ".join(variants)
+
+    # Jumeaux WebP (même nom, extension .webp) : servis en priorité via <picture>.
+    if ext.lower() != ".webp" and os.path.isfile(os.path.join(folder, f"{stem}.webp")):
+        webp = [f"{stem}-{w}.webp {w}w" for w in SIZE_VARIANTS
+                if os.path.isfile(os.path.join(folder, f"{stem}-{w}.webp"))]
+        if entry.get("width"):
+            webp.append(f"{stem}.webp {entry['width']}w")
+        entry["webp_srcset"] = ", ".join(webp)
 
     return entry
 
@@ -112,13 +149,24 @@ def main():
             warnings.append(f"'{slug}' ignoré : info.json contient une erreur ({e}).")
             continue
 
+        originals = [
+            f for f in sorted(os.listdir(folder))
+            if f.lower().endswith(IMAGE_EXTENSIONS)
+            and not is_variant_file(os.path.splitext(f)[0])
+        ]
+        for f in originals:
+            ensure_variants(folder, f)
         all_images = sorted(
             f for f in os.listdir(folder)
             if f.lower().endswith(IMAGE_EXTENSIONS)
         )
+        stems_non_webp = {os.path.splitext(f)[0] for f in all_images
+                          if not f.lower().endswith(".webp")}
         still_files = [
             f for f in all_images
             if not is_variant_file(os.path.splitext(f)[0])
+            # un .webp qui a un jumeau JPG/PNG n'est pas une photo de plus
+            and not (f.lower().endswith(".webp") and os.path.splitext(f)[0] in stems_non_webp)
         ]
         if not still_files:
             warnings.append(f"'{slug}' ignoré : aucune photo trouvée dans ce dossier.")
@@ -149,6 +197,7 @@ def main():
             "camera": info.get("camera", ""),      # ex. "Alexa Mini + Cooke S4 Mini"
             "synopsis": info.get("synopsis", ""),  # 1 à 3 phrases
             "video": info.get("video", ""),        # lien Vimeo ou YouTube (bande-annonce)
+            "video_date": info.get("video_date", ""),  # date de mise en ligne de la vidéo (AAAA-MM-JJ)
             # "featured": false -> le projet n'apparaît pas dans la vitrine
             # de l'accueil, mais garde sa page projet et ses photos.
             "featured": info.get("featured", True),

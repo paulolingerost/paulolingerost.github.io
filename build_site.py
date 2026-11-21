@@ -51,6 +51,19 @@ def img_attrs(base, s, sizes):
     return " ".join(out)
 
 
+def picture(base, s, sizes, img_rest):
+    """<img> enveloppé dans un <picture> qui propose d'abord la version WebP."""
+    img = f'<img {img_attrs(base, s, sizes)} {img_rest}>'
+    if not s.get("webp_srcset"):
+        return img
+    parts = []
+    for part in s["webp_srcset"].split(", "):
+        fname, w = part.split(" ")
+        parts.append(f"{base}{fname} {w}")
+    return (f'<picture><source type="image/webp" srcset="{esc(", ".join(parts))}" sizes="{sizes}">'
+            f'{img}</picture>')
+
+
 # ---------------------------------------------------------------- accueil
 
 def project_row(p, i):
@@ -58,8 +71,8 @@ def project_row(p, i):
     stills = "\n".join(
         f'          <button type="button" data-project="{i}" data-index="{idx}" '
         f'aria-label="Agrandir : {esc(still_alt(p, s, idx))}">'
-        f'<img {img_attrs(base, s, "(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw")} '
-        f'loading="lazy" alt="{esc(still_alt(p, s, idx))}"></button>'
+        + picture(base, s, "(max-width: 480px) 55vw, (max-width: 820px) 46vw, 26vw",
+                  f'loading="lazy" alt="{esc(still_alt(p, s, idx))}"') + '</button>'
         for idx, s in enumerate(p["stills"])
     )
     arrows = len(p["stills"]) >= 3
@@ -139,7 +152,13 @@ def project_page(p, prev_p, next_p):
                f'<meta property="og:image:height" content="{og_h}">\n') if og_h else ""
     type_ = p.get("type", "")
     # Titre court (Google coupe vers 60 caractères)
-    title_tag = f"{p['title']} ({type_}) — {NAME}, chef opérateur"
+    # « SOUL, clip de danse de Prince Mihai — Paul Olinger Ost, chef opérateur » :
+    # quelqu'un qui cherche le film ou son réalisateur tombe aussi sur la page.
+    dm = re.search(r"(?:réalisé|mis en scène) par (.+)$", p.get("credit", ""))
+    who = dm.group(1) if dm else ""
+    de = (f" d'{who}" if who[:1].lower() in "aeiouyéèêàâîôûh" else f" de {who}") if who else ""
+    short_type = type_.split(" — ")[0]          # « publicité — fashion week » → « publicité »
+    title_tag = f"{p['title']}, {short_type}{de} | {NAME}, chef opérateur"
     description = f"{p['title']}, {type_} {p.get('credit', '')}".strip().rstrip(".") + \
         f". Image : {NAME}, directeur de la photographie à Paris."
     if p.get("diffusion"):
@@ -164,13 +183,31 @@ def project_page(p, prev_p, next_p):
                           for n in re.split(r"\s*(?:&| et )\s*", m.group(1)) if n.strip()]
     if p.get("synopsis"):
         ld["abstract"] = p["synopsis"]
+    # Vidéo intégrée à la page : déclarée pour que Google puisse l'afficher
+    # dans ses résultats vidéo (il exige une date de mise en ligne).
+    vurl = p.get("video", "")
+    ym = re.search(r"(?:youtu\.be/|v=|embed/)([\w-]{11})", vurl)
+    vm = re.search(r"vimeo\.com/(?:video/)?(\d+)", vurl)
+    if (ym or vm) and p.get("video_date"):
+        ld["video"] = {
+            "@type": "VideoObject",
+            "name": p["title"],
+            "description": description,
+            "uploadDate": p["video_date"],
+            "thumbnailUrl": [image] + ([f"https://i.ytimg.com/vi/{ym.group(1)}/hqdefault.jpg"] if ym else []),
+            "embedUrl": (f"https://www.youtube.com/embed/{ym.group(1)}" if ym
+                         else f"https://player.vimeo.com/video/{vm.group(1)}"),
+            "url": vurl,
+        }
 
     still_tags = []
     for idx, s in enumerate(p["stills"]):
         lazy = "" if idx == 0 else 'loading="lazy" '
         still_tags.append(
-            f'      <figure class="project-still"><img {img_attrs(base, s, "(max-width: 640px) 100vw, 1100px" if idx == 0 else "(max-width: 640px) 100vw, 545px")} '
-            f'{lazy}alt="{esc(still_alt(p, s, idx))}"></figure>')
+            '      <figure class="project-still">'
+            + picture(base, s, "(max-width: 640px) 100vw, 1100px" if idx == 0 else "(max-width: 640px) 100vw, 545px",
+                      f'{lazy}alt="{esc(still_alt(p, s, idx))}"')
+            + '</figure>')
     stills = "\n".join(still_tags)
 
     def fiche(label, value):
@@ -190,7 +227,7 @@ def project_page(p, prev_p, next_p):
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>{esc(title_tag)}</title>
 <meta name="description" content="{esc(description)}">
 <link rel="canonical" href="{url}">

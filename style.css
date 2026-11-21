@@ -15,11 +15,19 @@
   --line: rgba(242,241,239,0.08);
   /* Marge latérale unique : en-tête, accueil, projets et pied de page
      s'alignent tous sur la même ligne verticale. */
-  --gutter:5vw;
+  /* max(…, env(safe-area-inset-*)) : sur iPhone tenu à l'horizontale,
+     le contenu ne passe jamais sous l'encoche ni sous les bords arrondis. */
+  --gutter:max(5vw, env(safe-area-inset-left), env(safe-area-inset-right));
+  --safe-bottom:env(safe-area-inset-bottom, 0px);
 }
-@media (max-width:820px){ :root{ --gutter:20px; } }
+@media (max-width:820px){ :root{ --gutter:max(20px, env(safe-area-inset-left), env(safe-area-inset-right)); } }
 *{box-sizing:border-box; margin:0; padding:0;}
-html{scroll-behavior:smooth;}
+html{
+  scroll-behavior:smooth;
+  /* Pas de rectangle gris au toucher sur iPhone/Android : les états
+     se jouent déjà en luminosité (et :focus-visible reste au clavier). */
+  -webkit-tap-highlight-color:transparent;
+}
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto;}
   *, *::before, *::after{animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important;}
@@ -95,7 +103,7 @@ main:focus{outline:none;}
   flex-direction:column;
   justify-content:flex-end;
   position:relative;
-  padding:0 var(--gutter) 48px;
+  padding:0 var(--gutter) calc(48px + var(--safe-bottom));
   background:#000;
   transition:opacity .45s ease;
 }
@@ -205,7 +213,7 @@ main:focus{outline:none;}
 }
 
 @media (max-width:640px){
-  .hero{padding:0 var(--gutter) 60px;}
+  .hero{padding:0 var(--gutter) calc(60px + var(--safe-bottom));}
   .hero-bottom{
     flex-direction:column;
     align-items:flex-start;
@@ -292,6 +300,8 @@ main:focus{outline:none;}
   border:none; padding:0; margin:0; background:#000; cursor:pointer;
   position:relative; overflow:hidden;
 }
+/* <picture> (version WebP + repli JPG) ne doit pas changer la mise en page */
+.stills picture, .project-still picture{display:contents;}
 .stills img{
   height:100%; width:auto; display:block;
   transition:opacity .4s ease;
@@ -525,7 +535,7 @@ main:focus{outline:none;}
 
 /* ---------- footer ---------- */
 footer{
-  padding:80px var(--gutter) 56px;
+  padding:80px var(--gutter) calc(56px + var(--safe-bottom));
   border-top:1px solid var(--line);
   display:flex; flex-wrap:wrap; justify-content:space-between; gap:24px;
   font-size:0.85rem; color:var(--ink-dim);

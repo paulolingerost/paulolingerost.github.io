@@ -11,79 +11,92 @@
     "camera": "",
     "synopsis": "",
     "video": "",
+    "video_date": "",
     "featured": true,
     "stills": [
       {
         "file": "01.jpg",
         "width": 1920,
         "height": 1080,
-        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
+        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w",
+        "webp_srcset": "01-480.webp 480w, 01-960.webp 960w, 01-1600.webp 1600w, 01.webp 1920w"
       },
       {
         "file": "02.jpg",
         "width": 1920,
         "height": 1080,
-        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
+        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w",
+        "webp_srcset": "02-480.webp 480w, 02-960.webp 960w, 02-1600.webp 1600w, 02.webp 1920w"
       },
       {
         "file": "03.jpg",
         "width": 1920,
         "height": 1080,
-        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
+        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w",
+        "webp_srcset": "03-480.webp 480w, 03-960.webp 960w, 03-1600.webp 1600w, 03.webp 1920w"
       },
       {
         "file": "04.jpg",
         "width": 1920,
         "height": 1080,
-        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w"
+        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w",
+        "webp_srcset": "04-480.webp 480w, 04-960.webp 960w, 04-1600.webp 1600w, 04.webp 1920w"
       },
       {
         "file": "05.jpg",
         "width": 1920,
         "height": 1080,
-        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w"
+        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w",
+        "webp_srcset": "05-480.webp 480w, 05-960.webp 960w, 05-1600.webp 1600w, 05.webp 1920w"
       },
       {
         "file": "06.jpg",
         "width": 1920,
         "height": 1080,
-        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w"
+        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w",
+        "webp_srcset": "06-480.webp 480w, 06-960.webp 960w, 06-1600.webp 1600w, 06.webp 1920w"
       },
       {
         "file": "07.jpg",
         "width": 1920,
         "height": 1080,
-        "srcset": "07-480.jpg 480w, 07-960.jpg 960w, 07-1600.jpg 1600w"
+        "srcset": "07-480.jpg 480w, 07-960.jpg 960w, 07-1600.jpg 1600w",
+        "webp_srcset": "07-480.webp 480w, 07-960.webp 960w, 07-1600.webp 1600w, 07.webp 1920w"
       },
       {
         "file": "08.jpg",
         "width": 1920,
         "height": 1080,
-        "srcset": "08-480.jpg 480w, 08-960.jpg 960w, 08-1600.jpg 1600w"
+        "srcset": "08-480.jpg 480w, 08-960.jpg 960w, 08-1600.jpg 1600w",
+        "webp_srcset": "08-480.webp 480w, 08-960.webp 960w, 08-1600.webp 1600w, 08.webp 1920w"
       },
       {
         "file": "09.jpg",
         "width": 1920,
         "height": 1080,
-        "srcset": "09-480.jpg 480w, 09-960.jpg 960w, 09-1600.jpg 1600w"
+        "srcset": "09-480.jpg 480w, 09-960.jpg 960w, 09-1600.jpg 1600w",
+        "webp_srcset": "09-480.webp 480w, 09-960.webp 960w, 09-1600.webp 1600w, 09.webp 1920w"
       },
       {
         "file": "10.jpg",
         "width": 1920,
         "height": 1080,
-        "srcset": "10-480.jpg 480w, 10-960.jpg 960w, 10-1600.jpg 1600w"
+        "srcset": "10-480.jpg 480w, 10-960.jpg 960w, 10-1600.jpg 1600w",
+        "webp_srcset": "10-480.webp 480w, 10-960.webp 960w, 10-1600.webp 1600w, 10.webp 1920w"
       },
       {
         "file": "11.jpg",
         "width": 1920,
         "height": 1080,
-        "srcset": "11-480.jpg 480w, 11-960.jpg 960w, 11-1600.jpg 1600w"
+        "srcset": "11-480.jpg 480w, 11-960.jpg 960w, 11-1600.jpg 1600w",
+        "webp_srcset": "11-480.webp 480w, 11-960.webp 960w, 11-1600.webp 1600w, 11.webp 1920w"
       },
       {
         "file": "12.jpg",
         "width": 1920,
         "height": 1080,
-        "srcset": "12-480.jpg 480w, 12-960.jpg 960w, 12-1600.jpg 1600w"
+        "srcset": "12-480.jpg 480w, 12-960.jpg 960w, 12-1600.jpg 1600w",
+        "webp_srcset": "12-480.webp 480w, 12-960.webp 960w, 12-1600.webp 1600w, 12.webp 1920w"
       }
     ]
   },
@@ -99,43 +112,50 @@
     "camera": "Alexa XT + Zeiss 35 mm GO T1.3",
     "synopsis": "",
     "video": "",
+    "video_date": "",
     "featured": true,
     "stills": [
       {
         "file": "01.jpg",
         "width": 648,
         "height": 362,
-        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
+        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w",
+        "webp_srcset": "01-480.webp 480w, 01-960.webp 960w, 01-1600.webp 1600w, 01.webp 648w"
       },
       {
         "file": "02.jpg",
         "width": 648,
         "height": 362,
-        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
+        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w",
+        "webp_srcset": "02-480.webp 480w, 02-960.webp 960w, 02-1600.webp 1600w, 02.webp 648w"
       },
       {
         "file": "03.jpg",
         "width": 648,
         "height": 362,
-        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
+        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w",
+        "webp_srcset": "03-480.webp 480w, 03-960.webp 960w, 03-1600.webp 1600w, 03.webp 648w"
       },
       {
         "file": "04.jpg",
         "width": 648,
         "height": 362,
-        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w"
+        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w",
+        "webp_srcset": "04-480.webp 480w, 04-960.webp 960w, 04-1600.webp 1600w, 04.webp 648w"
       },
       {
         "file": "05.jpg",
         "width": 648,
         "height": 362,
-        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w"
+        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w",
+        "webp_srcset": "05-480.webp 480w, 05-960.webp 960w, 05-1600.webp 1600w, 05.webp 648w"
       },
       {
         "file": "06.jpg",
         "width": 648,
         "height": 362,
-        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w"
+        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w",
+        "webp_srcset": "06-480.webp 480w, 06-960.webp 960w, 06-1600.webp 1600w, 06.webp 648w"
       }
     ]
   },
@@ -151,43 +171,50 @@
     "camera": "Alexa Mini LF + Technovision Classic 1,5x anamorphique",
     "synopsis": "",
     "video": "",
+    "video_date": "",
     "featured": true,
     "stills": [
       {
         "file": "01.jpg",
         "width": 648,
         "height": 272,
-        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
+        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w",
+        "webp_srcset": "01-480.webp 480w, 01-960.webp 960w, 01-1600.webp 1600w, 01.webp 648w"
       },
       {
         "file": "02.jpg",
         "width": 648,
         "height": 272,
-        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
+        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w",
+        "webp_srcset": "02-480.webp 480w, 02-960.webp 960w, 02-1600.webp 1600w, 02.webp 648w"
       },
       {
         "file": "03.jpg",
         "width": 648,
         "height": 272,
-        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
+        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w",
+        "webp_srcset": "03-480.webp 480w, 03-960.webp 960w, 03-1600.webp 1600w, 03.webp 648w"
       },
       {
         "file": "04.jpg",
         "width": 648,
         "height": 272,
-        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w"
+        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w",
+        "webp_srcset": "04-480.webp 480w, 04-960.webp 960w, 04-1600.webp 1600w, 04.webp 648w"
       },
       {
         "file": "05.jpg",
         "width": 648,
         "height": 272,
-        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w"
+        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w",
+        "webp_srcset": "05-480.webp 480w, 05-960.webp 960w, 05-1600.webp 1600w, 05.webp 648w"
       },
       {
         "file": "06.jpg",
         "width": 648,
         "height": 272,
-        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w"
+        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w",
+        "webp_srcset": "06-480.webp 480w, 06-960.webp 960w, 06-1600.webp 1600w, 06.webp 648w"
       }
     ]
   },
@@ -203,61 +230,71 @@
     "camera": "Alexa Mini + Cooke S4 Mini",
     "synopsis": "",
     "video": "",
+    "video_date": "",
     "featured": true,
     "stills": [
       {
         "file": "01.jpg",
         "width": 648,
         "height": 344,
-        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
+        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w",
+        "webp_srcset": "01-480.webp 480w, 01-960.webp 960w, 01-1600.webp 1600w, 01.webp 648w"
       },
       {
         "file": "02.jpg",
         "width": 648,
         "height": 344,
-        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
+        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w",
+        "webp_srcset": "02-480.webp 480w, 02-960.webp 960w, 02-1600.webp 1600w, 02.webp 648w"
       },
       {
         "file": "03.jpg",
         "width": 648,
         "height": 344,
-        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
+        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w",
+        "webp_srcset": "03-480.webp 480w, 03-960.webp 960w, 03-1600.webp 1600w, 03.webp 648w"
       },
       {
         "file": "04.jpg",
         "width": 648,
         "height": 344,
-        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w"
+        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w",
+        "webp_srcset": "04-480.webp 480w, 04-960.webp 960w, 04-1600.webp 1600w, 04.webp 648w"
       },
       {
         "file": "05.jpg",
         "width": 648,
         "height": 344,
-        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w"
+        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w",
+        "webp_srcset": "05-480.webp 480w, 05-960.webp 960w, 05-1600.webp 1600w, 05.webp 648w"
       },
       {
         "file": "06.jpg",
         "width": 648,
         "height": 344,
-        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w"
+        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w",
+        "webp_srcset": "06-480.webp 480w, 06-960.webp 960w, 06-1600.webp 1600w, 06.webp 648w"
       },
       {
         "file": "07.jpg",
         "width": 648,
         "height": 344,
-        "srcset": "07-480.jpg 480w, 07-960.jpg 960w, 07-1600.jpg 1600w"
+        "srcset": "07-480.jpg 480w, 07-960.jpg 960w, 07-1600.jpg 1600w",
+        "webp_srcset": "07-480.webp 480w, 07-960.webp 960w, 07-1600.webp 1600w, 07.webp 648w"
       },
       {
         "file": "08.jpg",
         "width": 648,
         "height": 344,
-        "srcset": "08-480.jpg 480w, 08-960.jpg 960w, 08-1600.jpg 1600w"
+        "srcset": "08-480.jpg 480w, 08-960.jpg 960w, 08-1600.jpg 1600w",
+        "webp_srcset": "08-480.webp 480w, 08-960.webp 960w, 08-1600.webp 1600w, 08.webp 648w"
       },
       {
         "file": "09.jpg",
         "width": 636,
         "height": 344,
-        "srcset": "09-480.jpg 480w, 09-960.jpg 960w, 09-1600.jpg 1600w"
+        "srcset": "09-480.jpg 480w, 09-960.jpg 960w, 09-1600.jpg 1600w",
+        "webp_srcset": "09-480.webp 480w, 09-960.webp 960w, 09-1600.webp 1600w, 09.webp 636w"
       }
     ]
   },
@@ -273,43 +310,50 @@
     "camera": "Alexa Plus + Cooke Panchro",
     "synopsis": "",
     "video": "",
+    "video_date": "",
     "featured": true,
     "stills": [
       {
         "file": "01.jpg",
         "width": 646,
         "height": 266,
-        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
+        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w",
+        "webp_srcset": "01-480.webp 480w, 01-960.webp 960w, 01-1600.webp 1600w, 01.webp 646w"
       },
       {
         "file": "02.jpg",
         "width": 646,
         "height": 266,
-        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
+        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w",
+        "webp_srcset": "02-480.webp 480w, 02-960.webp 960w, 02-1600.webp 1600w, 02.webp 646w"
       },
       {
         "file": "03.jpg",
         "width": 642,
         "height": 266,
-        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
+        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w",
+        "webp_srcset": "03-480.webp 480w, 03-960.webp 960w, 03-1600.webp 1600w, 03.webp 642w"
       },
       {
         "file": "04.jpg",
         "width": 640,
         "height": 266,
-        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w"
+        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w",
+        "webp_srcset": "04-480.webp 480w, 04-960.webp 960w, 04-1600.webp 1600w, 04.webp 640w"
       },
       {
         "file": "05.jpg",
         "width": 642,
         "height": 266,
-        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w"
+        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w",
+        "webp_srcset": "05-480.webp 480w, 05-960.webp 960w, 05-1600.webp 1600w, 05.webp 642w"
       },
       {
         "file": "06.jpg",
         "width": 646,
         "height": 266,
-        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w"
+        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w",
+        "webp_srcset": "06-480.webp 480w, 06-960.webp 960w, 06-1600.webp 1600w, 06.webp 646w"
       }
     ]
   },
@@ -325,43 +369,50 @@
     "camera": "Alexa Mini + Cooke Anamorphic S6",
     "synopsis": "",
     "video": "",
+    "video_date": "",
     "featured": true,
     "stills": [
       {
         "file": "01.jpg",
         "width": 648,
         "height": 272,
-        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
+        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w",
+        "webp_srcset": "01-480.webp 480w, 01-960.webp 960w, 01-1600.webp 1600w, 01.webp 648w"
       },
       {
         "file": "02.jpg",
         "width": 648,
         "height": 272,
-        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
+        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w",
+        "webp_srcset": "02-480.webp 480w, 02-960.webp 960w, 02-1600.webp 1600w, 02.webp 648w"
       },
       {
         "file": "03.jpg",
         "width": 648,
         "height": 272,
-        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
+        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w",
+        "webp_srcset": "03-480.webp 480w, 03-960.webp 960w, 03-1600.webp 1600w, 03.webp 648w"
       },
       {
         "file": "04.jpg",
         "width": 648,
         "height": 272,
-        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w"
+        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w",
+        "webp_srcset": "04-480.webp 480w, 04-960.webp 960w, 04-1600.webp 1600w, 04.webp 648w"
       },
       {
         "file": "05.jpg",
         "width": 648,
         "height": 272,
-        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w"
+        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w",
+        "webp_srcset": "05-480.webp 480w, 05-960.webp 960w, 05-1600.webp 1600w, 05.webp 648w"
       },
       {
         "file": "06.jpg",
         "width": 648,
         "height": 272,
-        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w"
+        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w",
+        "webp_srcset": "06-480.webp 480w, 06-960.webp 960w, 06-1600.webp 1600w, 06.webp 648w"
       }
     ]
   },
@@ -377,43 +428,50 @@
     "camera": "Sony F65 + Panavision Primo-S",
     "synopsis": "",
     "video": "",
+    "video_date": "",
     "featured": true,
     "stills": [
       {
         "file": "01.jpg",
         "width": 642,
         "height": 332,
-        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
+        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w",
+        "webp_srcset": "01-480.webp 480w, 01-960.webp 960w, 01-1600.webp 1600w, 01.webp 642w"
       },
       {
         "file": "02.jpg",
         "width": 648,
         "height": 332,
-        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
+        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w",
+        "webp_srcset": "02-480.webp 480w, 02-960.webp 960w, 02-1600.webp 1600w, 02.webp 648w"
       },
       {
         "file": "03.jpg",
         "width": 648,
         "height": 332,
-        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
+        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w",
+        "webp_srcset": "03-480.webp 480w, 03-960.webp 960w, 03-1600.webp 1600w, 03.webp 648w"
       },
       {
         "file": "04.jpg",
         "width": 648,
         "height": 332,
-        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w"
+        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w",
+        "webp_srcset": "04-480.webp 480w, 04-960.webp 960w, 04-1600.webp 1600w, 04.webp 648w"
       },
       {
         "file": "05.jpg",
         "width": 638,
         "height": 332,
-        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w"
+        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w",
+        "webp_srcset": "05-480.webp 480w, 05-960.webp 960w, 05-1600.webp 1600w, 05.webp 638w"
       },
       {
         "file": "06.jpg",
         "width": 648,
         "height": 332,
-        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w"
+        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w",
+        "webp_srcset": "06-480.webp 480w, 06-960.webp 960w, 06-1600.webp 1600w, 06.webp 648w"
       }
     ]
   },
@@ -429,73 +487,85 @@
     "camera": "",
     "synopsis": "",
     "video": "",
+    "video_date": "",
     "featured": true,
     "stills": [
       {
         "file": "01.jpg",
         "width": 646,
         "height": 272,
-        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
+        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w",
+        "webp_srcset": "01-480.webp 480w, 01-960.webp 960w, 01-1600.webp 1600w, 01.webp 646w"
       },
       {
         "file": "02.jpg",
         "width": 646,
         "height": 272,
-        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
+        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w",
+        "webp_srcset": "02-480.webp 480w, 02-960.webp 960w, 02-1600.webp 1600w, 02.webp 646w"
       },
       {
         "file": "03.jpg",
         "width": 646,
         "height": 272,
-        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
+        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w",
+        "webp_srcset": "03-480.webp 480w, 03-960.webp 960w, 03-1600.webp 1600w, 03.webp 646w"
       },
       {
         "file": "04.jpg",
         "width": 646,
         "height": 272,
-        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w"
+        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w",
+        "webp_srcset": "04-480.webp 480w, 04-960.webp 960w, 04-1600.webp 1600w, 04.webp 646w"
       },
       {
         "file": "05.jpg",
         "width": 646,
         "height": 272,
-        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w"
+        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w",
+        "webp_srcset": "05-480.webp 480w, 05-960.webp 960w, 05-1600.webp 1600w, 05.webp 646w"
       },
       {
         "file": "06.jpg",
         "width": 646,
         "height": 272,
-        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w"
+        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w",
+        "webp_srcset": "06-480.webp 480w, 06-960.webp 960w, 06-1600.webp 1600w, 06.webp 646w"
       },
       {
         "file": "07.jpg",
         "width": 648,
         "height": 272,
-        "srcset": "07-480.jpg 480w, 07-960.jpg 960w, 07-1600.jpg 1600w"
+        "srcset": "07-480.jpg 480w, 07-960.jpg 960w, 07-1600.jpg 1600w",
+        "webp_srcset": "07-480.webp 480w, 07-960.webp 960w, 07-1600.webp 1600w, 07.webp 648w"
       },
       {
         "file": "08.jpg",
         "width": 648,
         "height": 272,
-        "srcset": "08-480.jpg 480w, 08-960.jpg 960w, 08-1600.jpg 1600w"
+        "srcset": "08-480.jpg 480w, 08-960.jpg 960w, 08-1600.jpg 1600w",
+        "webp_srcset": "08-480.webp 480w, 08-960.webp 960w, 08-1600.webp 1600w, 08.webp 648w"
       },
       {
         "file": "09.jpg",
         "width": 648,
         "height": 272,
-        "srcset": "09-480.jpg 480w, 09-960.jpg 960w, 09-1600.jpg 1600w"
+        "srcset": "09-480.jpg 480w, 09-960.jpg 960w, 09-1600.jpg 1600w",
+        "webp_srcset": "09-480.webp 480w, 09-960.webp 960w, 09-1600.webp 1600w, 09.webp 648w"
       },
       {
         "file": "10.jpg",
         "width": 648,
         "height": 272,
-        "srcset": "10-480.jpg 480w, 10-960.jpg 960w, 10-1600.jpg 1600w"
+        "srcset": "10-480.jpg 480w, 10-960.jpg 960w, 10-1600.jpg 1600w",
+        "webp_srcset": "10-480.webp 480w, 10-960.webp 960w, 10-1600.webp 1600w, 10.webp 648w"
       },
       {
         "file": "11.jpg",
         "width": 648,
         "height": 272,
-        "srcset": "11-480.jpg 480w, 11-960.jpg 960w, 11-1600.jpg 1600w"
+        "srcset": "11-480.jpg 480w, 11-960.jpg 960w, 11-1600.jpg 1600w",
+        "webp_srcset": "11-480.webp 480w, 11-960.webp 960w, 11-1600.webp 1600w, 11.webp 648w"
       }
     ]
   },
@@ -511,43 +581,50 @@
     "camera": "",
     "synopsis": "",
     "video": "https://www.youtube.com/watch?v=a7_6oi0zh34",
+    "video_date": "2026-04-24",
     "featured": true,
     "stills": [
       {
         "file": "01.jpg",
         "width": 1920,
         "height": 818,
-        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
+        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w",
+        "webp_srcset": "01-480.webp 480w, 01-960.webp 960w, 01-1600.webp 1600w, 01.webp 1920w"
       },
       {
         "file": "02.jpg",
         "width": 1920,
         "height": 818,
-        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
+        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w",
+        "webp_srcset": "02-480.webp 480w, 02-960.webp 960w, 02-1600.webp 1600w, 02.webp 1920w"
       },
       {
         "file": "03.jpg",
         "width": 1920,
         "height": 818,
-        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
+        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w",
+        "webp_srcset": "03-480.webp 480w, 03-960.webp 960w, 03-1600.webp 1600w, 03.webp 1920w"
       },
       {
         "file": "04.jpg",
         "width": 1920,
         "height": 818,
-        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w"
+        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w",
+        "webp_srcset": "04-480.webp 480w, 04-960.webp 960w, 04-1600.webp 1600w, 04.webp 1920w"
       },
       {
         "file": "05.jpg",
         "width": 1920,
         "height": 818,
-        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w"
+        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w",
+        "webp_srcset": "05-480.webp 480w, 05-960.webp 960w, 05-1600.webp 1600w, 05.webp 1920w"
       },
       {
         "file": "06.jpg",
         "width": 1920,
         "height": 818,
-        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w"
+        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w",
+        "webp_srcset": "06-480.webp 480w, 06-960.webp 960w, 06-1600.webp 1600w, 06.webp 1920w"
       }
     ]
   },
@@ -563,43 +640,50 @@
     "camera": "",
     "synopsis": "",
     "video": "https://www.youtube.com/watch?v=XsFiSk8Dwps",
+    "video_date": "2025-04-11",
     "featured": true,
     "stills": [
       {
         "file": "01.jpg",
         "width": 1920,
         "height": 816,
-        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
+        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w",
+        "webp_srcset": "01-480.webp 480w, 01-960.webp 960w, 01-1600.webp 1600w, 01.webp 1920w"
       },
       {
         "file": "02.jpg",
         "width": 1920,
         "height": 816,
-        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
+        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w",
+        "webp_srcset": "02-480.webp 480w, 02-960.webp 960w, 02-1600.webp 1600w, 02.webp 1920w"
       },
       {
         "file": "03.jpg",
         "width": 1920,
         "height": 816,
-        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
+        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w",
+        "webp_srcset": "03-480.webp 480w, 03-960.webp 960w, 03-1600.webp 1600w, 03.webp 1920w"
       },
       {
         "file": "04.jpg",
         "width": 1920,
         "height": 816,
-        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w"
+        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w",
+        "webp_srcset": "04-480.webp 480w, 04-960.webp 960w, 04-1600.webp 1600w, 04.webp 1920w"
       },
       {
         "file": "05.jpg",
         "width": 1920,
         "height": 816,
-        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w"
+        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w",
+        "webp_srcset": "05-480.webp 480w, 05-960.webp 960w, 05-1600.webp 1600w, 05.webp 1920w"
       },
       {
         "file": "06.jpg",
         "width": 1920,
         "height": 816,
-        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w"
+        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w",
+        "webp_srcset": "06-480.webp 480w, 06-960.webp 960w, 06-1600.webp 1600w, 06.webp 1920w"
       }
     ]
   },
@@ -615,25 +699,29 @@
     "camera": "",
     "synopsis": "",
     "video": "",
+    "video_date": "",
     "featured": false,
     "stills": [
       {
         "file": "01.jpg",
         "width": 648,
         "height": 272,
-        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
+        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w",
+        "webp_srcset": "01-480.webp 480w, 01-960.webp 960w, 01-1600.webp 1600w, 01.webp 648w"
       },
       {
         "file": "02.jpg",
         "width": 648,
         "height": 272,
-        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
+        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w",
+        "webp_srcset": "02-480.webp 480w, 02-960.webp 960w, 02-1600.webp 1600w, 02.webp 648w"
       },
       {
         "file": "03.jpg",
         "width": 648,
         "height": 272,
-        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
+        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w",
+        "webp_srcset": "03-480.webp 480w, 03-960.webp 960w, 03-1600.webp 1600w, 03.webp 648w"
       }
     ]
   },
@@ -649,43 +737,50 @@
     "camera": "Alexa Mini + Cooke Anamorphic",
     "synopsis": "",
     "video": "",
+    "video_date": "",
     "featured": false,
     "stills": [
       {
         "file": "01.jpg",
         "width": 644,
         "height": 240,
-        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
+        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w",
+        "webp_srcset": "01-480.webp 480w, 01-960.webp 960w, 01-1600.webp 1600w, 01.webp 644w"
       },
       {
         "file": "02.jpg",
         "width": 642,
         "height": 248,
-        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
+        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w",
+        "webp_srcset": "02-480.webp 480w, 02-960.webp 960w, 02-1600.webp 1600w, 02.webp 642w"
       },
       {
         "file": "03.jpg",
         "width": 642,
         "height": 240,
-        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
+        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w",
+        "webp_srcset": "03-480.webp 480w, 03-960.webp 960w, 03-1600.webp 1600w, 03.webp 642w"
       },
       {
         "file": "04.jpg",
         "width": 640,
         "height": 240,
-        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w"
+        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w",
+        "webp_srcset": "04-480.webp 480w, 04-960.webp 960w, 04-1600.webp 1600w, 04.webp 640w"
       },
       {
         "file": "05.jpg",
         "width": 642,
         "height": 240,
-        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w"
+        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w",
+        "webp_srcset": "05-480.webp 480w, 05-960.webp 960w, 05-1600.webp 1600w, 05.webp 642w"
       },
       {
         "file": "06.jpg",
         "width": 642,
         "height": 240,
-        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w"
+        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w",
+        "webp_srcset": "06-480.webp 480w, 06-960.webp 960w, 06-1600.webp 1600w, 06.webp 642w"
       }
     ]
   },
@@ -701,43 +796,50 @@
     "camera": "Blackmagic Pocket 6K + Atlas Orion Anamorphic",
     "synopsis": "",
     "video": "",
+    "video_date": "",
     "featured": false,
     "stills": [
       {
         "file": "01.jpg",
         "width": 646,
         "height": 268,
-        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
+        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w",
+        "webp_srcset": "01-480.webp 480w, 01-960.webp 960w, 01-1600.webp 1600w, 01.webp 646w"
       },
       {
         "file": "02.jpg",
         "width": 644,
         "height": 268,
-        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
+        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w",
+        "webp_srcset": "02-480.webp 480w, 02-960.webp 960w, 02-1600.webp 1600w, 02.webp 644w"
       },
       {
         "file": "03.jpg",
         "width": 644,
         "height": 268,
-        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
+        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w",
+        "webp_srcset": "03-480.webp 480w, 03-960.webp 960w, 03-1600.webp 1600w, 03.webp 644w"
       },
       {
         "file": "04.jpg",
         "width": 644,
         "height": 268,
-        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w"
+        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w",
+        "webp_srcset": "04-480.webp 480w, 04-960.webp 960w, 04-1600.webp 1600w, 04.webp 644w"
       },
       {
         "file": "05.jpg",
         "width": 644,
         "height": 268,
-        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w"
+        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w",
+        "webp_srcset": "05-480.webp 480w, 05-960.webp 960w, 05-1600.webp 1600w, 05.webp 644w"
       },
       {
         "file": "06.jpg",
         "width": 644,
         "height": 268,
-        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w"
+        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w",
+        "webp_srcset": "06-480.webp 480w, 06-960.webp 960w, 06-1600.webp 1600w, 06.webp 644w"
       }
     ]
   },
@@ -753,43 +855,50 @@
     "camera": "",
     "synopsis": "",
     "video": "https://www.youtube.com/watch?v=RugQRKKmBEs",
+    "video_date": "2020-09-20",
     "featured": false,
     "stills": [
       {
         "file": "01.jpg",
         "width": 1920,
         "height": 816,
-        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
+        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w",
+        "webp_srcset": "01-480.webp 480w, 01-960.webp 960w, 01-1600.webp 1600w, 01.webp 1920w"
       },
       {
         "file": "02.jpg",
         "width": 1920,
         "height": 816,
-        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
+        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w",
+        "webp_srcset": "02-480.webp 480w, 02-960.webp 960w, 02-1600.webp 1600w, 02.webp 1920w"
       },
       {
         "file": "03.jpg",
         "width": 1920,
         "height": 816,
-        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
+        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w",
+        "webp_srcset": "03-480.webp 480w, 03-960.webp 960w, 03-1600.webp 1600w, 03.webp 1920w"
       },
       {
         "file": "04.jpg",
         "width": 1920,
         "height": 816,
-        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w"
+        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w",
+        "webp_srcset": "04-480.webp 480w, 04-960.webp 960w, 04-1600.webp 1600w, 04.webp 1920w"
       },
       {
         "file": "05.jpg",
         "width": 1920,
         "height": 816,
-        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w"
+        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w",
+        "webp_srcset": "05-480.webp 480w, 05-960.webp 960w, 05-1600.webp 1600w, 05.webp 1920w"
       },
       {
         "file": "06.jpg",
         "width": 1920,
         "height": 816,
-        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w"
+        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w",
+        "webp_srcset": "06-480.webp 480w, 06-960.webp 960w, 06-1600.webp 1600w, 06.webp 1920w"
       }
     ]
   },
@@ -805,43 +914,50 @@
     "camera": "",
     "synopsis": "",
     "video": "https://www.youtube.com/watch?v=ZMnLSOEwfBY",
+    "video_date": "2020-06-19",
     "featured": false,
     "stills": [
       {
         "file": "01.jpg",
         "width": 1920,
         "height": 816,
-        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w"
+        "srcset": "01-480.jpg 480w, 01-960.jpg 960w, 01-1600.jpg 1600w",
+        "webp_srcset": "01-480.webp 480w, 01-960.webp 960w, 01-1600.webp 1600w, 01.webp 1920w"
       },
       {
         "file": "02.jpg",
         "width": 1920,
         "height": 816,
-        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w"
+        "srcset": "02-480.jpg 480w, 02-960.jpg 960w, 02-1600.jpg 1600w",
+        "webp_srcset": "02-480.webp 480w, 02-960.webp 960w, 02-1600.webp 1600w, 02.webp 1920w"
       },
       {
         "file": "03.jpg",
         "width": 1920,
         "height": 816,
-        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w"
+        "srcset": "03-480.jpg 480w, 03-960.jpg 960w, 03-1600.jpg 1600w",
+        "webp_srcset": "03-480.webp 480w, 03-960.webp 960w, 03-1600.webp 1600w, 03.webp 1920w"
       },
       {
         "file": "04.jpg",
         "width": 1920,
         "height": 816,
-        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w"
+        "srcset": "04-480.jpg 480w, 04-960.jpg 960w, 04-1600.jpg 1600w",
+        "webp_srcset": "04-480.webp 480w, 04-960.webp 960w, 04-1600.webp 1600w, 04.webp 1920w"
       },
       {
         "file": "05.jpg",
         "width": 1920,
         "height": 816,
-        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w"
+        "srcset": "05-480.jpg 480w, 05-960.jpg 960w, 05-1600.jpg 1600w",
+        "webp_srcset": "05-480.webp 480w, 05-960.webp 960w, 05-1600.webp 1600w, 05.webp 1920w"
       },
       {
         "file": "06.jpg",
         "width": 1920,
         "height": 816,
-        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w"
+        "srcset": "06-480.jpg 480w, 06-960.jpg 960w, 06-1600.jpg 1600w",
+        "webp_srcset": "06-480.webp 480w, 06-960.webp 960w, 06-1600.webp 1600w, 06.webp 1920w"
       }
     ]
   }
